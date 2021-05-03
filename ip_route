@@ -1,0 +1,2 @@
+sudo ip route add default via 10.10.32.1 dev enp2s0f2
+sudo ip addr add  10.10.32.100/24 dev enp2s0f2

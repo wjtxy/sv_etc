@@ -1,0 +1,11 @@
+[Unit]
+Description=cpu performance
+
+# NetworkManager users will probably want the dbus version instead.
+
+[Service]
+Type=simple
+ExecStart=/home/sv/sv_etc/_set_cpufre.sh
+
+[Install]
+WantedBy=multi-user.target
