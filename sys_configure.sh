@@ -30,7 +30,7 @@ sudo pacman -S sway pulseaudio-alsa xclip nodejs alacritty npm \
 		ttf-arphic-uming noto-fonts-cjk cpio rsync fcitx5-rime wget\
 		openssl openssh fcitx5-pinyin-moegirl-rime  fcitx5-pinyin-zhwiki-rime  \
 		fcitx5-material-color fcitx5-mozc minicom htop neofetch \
-		rubygems man dmenu fuse2
+		rubygems man dmenu fuse2 kde-dev-utils
 # archlinux no sound
 amixer sset Master unmute
 python2 /home/sv/sv_etc/get-pip.py

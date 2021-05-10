@@ -1,6 +1,6 @@
 
 nnoremap <F2> :set nonumber<cr>
-nnoremap q :q<cr>
+nnoremap w :q<cr>
 nnoremap X :q<cr>
 map <c-]> g<c-]>
 map J j
@@ -11,7 +11,7 @@ nnoremap gv :vsplit<cr>
 nnoremap <c-t> :%s/<C-R>=expand("<cword>")<cr>//g<left><left>
 vnoremap <c-t> y:%s/<C-R>"//g<left><left>
 
-nnoremap zo A{<esc>o}<esc>O
+nnoremap zo jA{<esc>o}<esc>O
 nnoremap zi A{<esc>o};<esc>O
 nnoremap z; A;<esc>
 inoremap z; <esc>A;<esc>
