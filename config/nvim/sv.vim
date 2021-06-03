@@ -1,9 +1,8 @@
 
 nnoremap <F2> :set nonumber<cr>
-nnoremap w :q<cr>
 nnoremap X :q<cr>
 map <c-]> g<c-]>
-map J j
+map J 4j
 
 nnoremap gw <c-w>w
 nnoremap gs :split<cr>
@@ -11,8 +10,8 @@ nnoremap gv :vsplit<cr>
 nnoremap <c-t> :%s/<C-R>=expand("<cword>")<cr>//g<left><left>
 vnoremap <c-t> y:%s/<C-R>"//g<left><left>
 
-nnoremap zo jA{<esc>o}<esc>O
-nnoremap zi A{<esc>o};<esc>O
+nnoremap zo <esc>jA{<esc>o}<esc>O
+nnoremap zi <esc>A{<esc>o};<esc>O
 nnoremap z; A;<esc>
 inoremap z; <esc>A;<esc>
 vnoremap z( s()<esc><left>p
@@ -21,7 +20,6 @@ vnoremap z" s""<esc><left>p
 
 " 显示c函数
 nnoremap ff :call ShowFuncName() <CR>
-nnoremap fh :!<space>/home/sv/sv_etc/ctags_highlight_c.sh<cr><cr>
 
 nnoremap <c-k> 4k
 nnoremap <c-j> 4j
@@ -165,22 +163,6 @@ func Set_py_Title()
 	else 
 	endif
 	normal G
-endfunc 
-
-func Set_c_Title() 
-	call setline(1, "#include <stdio.h>")
-	call append(line("."), "")
-	call append(line(".")+1, "")
-	call append(line(".")+2, "")
-	call append(line(".")+3, "")
-	call append(line(".")+4, "")
-	call append(line(".")+5, "")
-	call append(line(".")+6, "int main(int argc, char *argv[])")
-	call append(line(".")+7, "{")
-	call append(line(".")+8, "")
-	call append(line(".")+9, "    return 0;")
-	call append(line(".")+10, "}")
-	normal 19j
 endfunc 
 
 fun! ShowFuncName()
