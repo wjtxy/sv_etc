@@ -20,17 +20,20 @@ sudo cp /home/sv/sv_etc/mirrorlist /etc/pacman.d/ -rvf
 sudo cp /home/sv/sv_etc/resolv.conf /etc/ -rvf
 # sudo chattr +i /etc/resolv.conf 
 sudo rm /etc/ssh -rvf
+sudo pacman -Syyu
 sudo pacman -S sway pulseaudio-alsa xclip nodejs alacritty npm \
 		fcitx5 fcitx5-gtk fcitx5-qt alsa-utils unzip zip\
 		wlroots xorg-xwayland wayland-protocols wayland ctags fcitx5-configtool \
-		translate-shell zsh git wl-clipboard grim slurp sshfs nfs-utils lib32-gcc-libs \
-		clang base-devel python3 python2 python-pip lib32-curl lib32-glibc \
-		clash yay wl-clipboard the_silver_searcher bc lzop subversion \
+		translate-shell zsh wl-clipboard grim slurp sshfs nfs-utils lib32-gcc-libs \
+		clang base-devel python3 python2 python-pip \
+		clash wl-clipboard the_silver_searcher bc lzop subversion \
 		wqy-microhei wqy-microhei-lite wqy-bitmapfont wqy-zenhei ttf-arphic-ukai \
 		ttf-arphic-uming noto-fonts-cjk cpio rsync fcitx5-rime wget\
-		openssl openssh fcitx5-pinyin-moegirl-rime  fcitx5-pinyin-zhwiki-rime  \
+		openssl openssh lib32-zlib yay\
 		fcitx5-material-color fcitx5-mozc minicom htop neofetch \
-		rubygems man dmenu fuse2 kde-dev-utils
+		rubygems man dmenu fuse2 
+#kde-dev-utils
+
 # archlinux no sound
 amixer sset Master unmute
 python2 /home/sv/sv_etc/get-pip.py
@@ -49,3 +52,5 @@ gem install neovim
 cp /home/sv/sv_etc/.bashrc /home/sv -rvf
 source /home/sv/.bashrc
 clash &
+gic https://github.com/zsh-users/zsh-autosuggestions /home/sv/zsh-autosuggestions
+gic https://github.com/zsh-users/zsh-syntax-highlighting /home/sv/zsh-syntax-highlighting

@@ -7,6 +7,7 @@
   }
 },
 "diagnostic.enableSign": true,
+"diagnostic.warningSign": "",
 "translator.engines":[
 	"google",
 	"youdao"

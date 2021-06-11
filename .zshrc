@@ -18,9 +18,13 @@ setopt no_nomatch
 alias gic="git clone --depth=1" 
 alias gis="git status" 
 bindkey '^ ' autosuggest-accept
+bindkey '^k' autosuggest-accept
 # export LANG=zh_CN.GBK
 export LANG=en_US.UTF-8
-export PATH="$PATH:/home/sv/work/ebf_6ull_buildroot/output/host/bin"
+export PATH="$PATH:/home/sv/work/ebf_6ull_buildroot/output/host/bin:\
+	/opt/arm-xm-linux/usr/bin/:/opt/arm-xmv2-linux/usr/bin/"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:\
+	/opt/arm-xm-linux/usr/lib/:/opt/arm-xmv2-linux/usr/lib/"
 
 #unset http_proxy
 #unset https_proxy
