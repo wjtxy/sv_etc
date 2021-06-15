@@ -1,0 +1,6 @@
+sudo ip route add default via 10.10.32.1 dev enp2s0f2
+sudo ip addr add  10.10.32.100/24 dev enp2s0f2
+//挂载vm所有共享文件夹
+sudo vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other
+//挂载sharedfolder目录
+sudo vmhgfs-fuse .host:/sharedfolder /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other

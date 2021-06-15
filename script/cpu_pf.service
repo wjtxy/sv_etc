@@ -5,7 +5,7 @@ Description=cpu performance
 
 [Service]
 Type=simple
-ExecStart=/home/sv/sv_etc/_set_cpufre.sh
+ExecStart=/home/sv/sv_etc/script/_set_cpufre.sh
 
 [Install]
 WantedBy=multi-user.target
