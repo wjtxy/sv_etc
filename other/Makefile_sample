@@ -5,48 +5,35 @@ RM := rm
 
 TARGET := demo
 
-MFILE_PATH :=  	./debug		\
-				./mlqueue   \
-				./mlist     \
-				./mmodule   \
-				./mvideo    \
-				./msdl	    \
-				.			
+src_path :=  	.	\
+				./msdl
 
-MINCLUDE_PATH := $(MFILE_PATH) \
-				./libsdl/include \
-				./libffmpeg/include \
+inc_path := 	$(objs_path) \
 				./include
 
-MCDEFINE := 
-MCDEFINE += -DPRINT_LEVEL=DEBUG -g3 -gdwarf-2
-MINCLUDE := $(patsubst %, -I%, $(MINCLUDE_PATH))
-MCFLAGS := -c $(MINCLUDE) $(MCDEFINE)
+define := -g3 -gdwarf-2
+inc := $(patsubst %, -I%, $(inc_path))
+CFLAGS := -c $(inc) $(define)
 
-MLD_LIB := pthread	\
-		   avformat	\
-		   avcodec 	\
-		   avutil 	\
-		   swscale 	\
-		   SDL2
-MLD_FLAGS := $(patsubst %, -l%, $(MLD_LIB))
+libs :=			pthread	\
+				math
 
-SRCS := $(wildcard $(addsuffix /*.c, $(MFILE_PATH)))
-OBJS := $(patsubst %.c, %.o, $(SRCS))
+LIBS := $(patsubst %, -l%, $(libs))
+
+srcs := $(wildcard $(addsuffix /*.c, $(src_path)))
+OBJS := $(patsubst %.c, %.o, $(srcs))
 
 all:$(TARGET)
 	
 $(TARGET):$(OBJS)
-	$(GCC) $(MLD_FLAGS) -o $@ $^
+	$(GCC) $(LIBS) -o $@ $^
 
 %.o:%.c
-	$(GCC) $(MCFLAGS) -o $@ $^
+	$(GCC) $(CFLAGS) -o $@ $^
 
 .PHONY:clean
-e:
-	$(GCC) -E $(MINCLUDE) $(SRCS) > eee
 clean:
-	@$(RM) $(TARGET) $(OBJS) eee -rvf
+	@$(RM) $(TARGET) $(OBJS) -rvf
 
 
 
