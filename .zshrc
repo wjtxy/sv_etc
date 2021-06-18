@@ -1,5 +1,4 @@
 export ZSH="/home/sv/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
 
 ZSH_THEME="nicoulaj"
 
@@ -11,6 +10,7 @@ plugins=(git
 	 )
 
 setopt no_nomatch
+source $ZSH/oh-my-zsh.sh
 
 alias em="emacs -nw"
 alias q="exit"

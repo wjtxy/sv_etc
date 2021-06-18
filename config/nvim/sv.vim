@@ -9,8 +9,8 @@ nnoremap gs :split<cr>
 nnoremap <c-t> :%s/<C-R>=expand("<cword>")<cr>//g<left><left>
 vnoremap <c-t> y:%s/<C-R>"//g<left><left>
 
-nnoremap zo o<esc>A{<esc>o}<esc>O
-nnoremap zi A{<esc>o};<esc>O
+nnoremap zi o<esc>A{<esc>o}<esc>O
+nnoremap zI A{<esc>o};<esc>O
 nnoremap ;; A;<esc>
 inoremap ;; <esc>A;<esc>
 vnoremap z( s()<esc><left>p
@@ -33,15 +33,20 @@ inoremap <c-o> <esc>o
 map J j
 
 " configure *************************************************************************
-set path+=/usr/include
+set autochdir " 自动设当前编辑的文件所在目录为当前工作路径
+" 代码折叠
+set nofoldenable
+set foldlevel=99
+set fdm=syntax
 set fencs=utf-8,ucs-bom,shift-jis,gbk,gb2312,gb18030,cp936,ansi,latin1
 set termencoding=gbk,utf-8
 set encoding=utf-8
+set path+=/usr/include
 set cmdheight=1
 set nomore
 set textwidth=90
 set nobackup
-" set undofile "持久undo"
+" set undofile " 持久undo
 set noswapfile
 set directory=.
 set udir=~/.config/nvim/undo//
@@ -67,11 +72,13 @@ set history=1000
 set hlsearch
 set ignorecase
 set smartindent
-filetype on
-filetype plugin on
-filetype indent on
-let &fcs='eob: '
+
+" ******************************************************************************
 " let g:ruby_host_prog = '/home/sv/.gem/ruby/2.7.0/bin/neovim-ruby-host'
+let &fcs='eob: '
 let g:python_host_prog = "/usr/bin/python2"
 let g:python3_host_prog = "/usr/bin/python3"
 
+filetype on
+filetype plugin on
+filetype indent on

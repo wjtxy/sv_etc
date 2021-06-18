@@ -4,6 +4,18 @@ autocmd BufNewFile *.py exec ":call Set_py_Title()"
 autocmd BufNewFile *.h exec ":call Set_h_Title()"
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+
+" ******************************************************************************
+func! Printf_hex_to_dec()
+	let l:cur_word = expand("<cword>")
+	:echo printf("%d", l:cur_word)
+endfunc
+" ******************************************************************************
+func! Printf_dec_to_hex()
+	let l:cur_word = expand("<cword>")
+	:echo printf("%#x", l:cur_word)
+endfunc
+
 " ******************************************************************************
 func Copy_clang_format()
 	let l:buf_dir = expand('%:p:h', 1)

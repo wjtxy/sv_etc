@@ -14,6 +14,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
 " tagbar ***********************************************************************
+let g:tagbar_sort = 0
 let g:tagbar_autoclose = 1
 let g:tagbar_show_balloon = 0
 let g:tagbar_ctags_bin = 'ctags'
@@ -60,6 +61,7 @@ au FileType gitcommit,gitrebase,json,vim,make,sh,markdown,conf
 
 " coc **********************************************************************
 let g:coc_global_extensions = [
+			\'coc-calc',
 			\'coc-python', 
 			\'coc-java', 
 			\'coc-json', 
