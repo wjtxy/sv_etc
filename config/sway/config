@@ -4,8 +4,9 @@
 
 exec fcitx5
 exec clash
+exec unclutter --timeout 1
 default_border none
-client.focused #FF0099 #FF0099 #ffffff
+# client.focused #FF0099 #FF0099 #ffffff
 # Logo key. Use Mod1 for Alt.
 set $mod Mod1
 set $left h
@@ -29,10 +30,11 @@ input * {
 #
 # Basics:
 #
-	bindsym $mod+i exec /home/sv/sv_etc/vol_up.sh
-	bindsym $mod+n exec /home/sv/sv_etc/vol_down.sh
+	bindsym $mod+i exec /home/sv/sv_etc/script/vol_up.sh
+	bindsym $mod+n exec /home/sv/sv_etc/script/vol_down.sh
 #capture screen
 	bindsym $mod+Shift+g exec grim -g "$(slurp)" - | wl-copy
+	bindsym $mod+g exec grim -g "$(slurp)"
     # Start a terminasplitvl
     bindsym $mod+Return exec $term
     bindsym $mod+Shift+q kill

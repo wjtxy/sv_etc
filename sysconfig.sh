@@ -49,8 +49,8 @@ sudo systemctl enable sshd.service
 sudo cp /home/sv/sv_etc/etc/sshd_config /etc/ssh -rvf
 sudo npm install -g neovim
 gem install neovim
-cp /home/sv/sv_etc/.bashrc /home/sv -rvf
-source /home/sv/.bashrc
-clash &
-gic https://github.com/zsh-users/zsh-autosuggestions /home/sv/zsh-autosuggestions
-gic https://github.com/zsh-users/zsh-syntax-highlighting /home/sv/zsh-syntax-highlighting
+## cp /home/sv/sv_etc/.bashrc /home/sv -rvf
+## source /home/sv/.bashrc
+## clash &
+## gic https://github.com/zsh-users/zsh-autosuggestions /home/sv/zsh-autosuggestions
+## gic https://github.com/zsh-users/zsh-syntax-highlighting /home/sv/zsh-syntax-highlighting
