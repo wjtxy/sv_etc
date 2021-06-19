@@ -8,12 +8,10 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " ******************************************************************************
 let s:try_exit_empty_buf = 0
 func! Try_exit_empty_buf()
-	if len(buffer_name()) == 0 && s:try_exit_empty_buf == 1
-		echo buffer_name()
+	if len(buffer_name()) == 0 && s:try_exit_empty_buf == 1 && winnr('$') == 1
 		exe "q"
 	else
 		let s:try_exit_empty_buf = 1
-		echo buffer_name()
 	endif
 endfunc
 
