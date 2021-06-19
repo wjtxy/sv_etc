@@ -18,6 +18,7 @@ Plug 'kristijanhusak/defx-git'
 call plug#end()
 
 " defx *************************************************************************
+autocmd VimEnter * if argc() == 0 | :Defx | endif
 call defx#custom#option('_', {
 	\ 'columns': 'mark:git:icons:filename:type:size:time',
 	\ 'ignored_files':
