@@ -24,7 +24,8 @@ call defx#custom#option('_', {
 	\ 'ignored_files':
 	\     '*.swp,*.o,*.cmd,.*',
 	\ 'buffer_name': '',
-	\ 'new': 1
+	\ 'new': 1,
+	\ 'auto_cd': 1
 	\ })
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
@@ -104,6 +105,8 @@ let g:tagbar_ctags_bin = 'ctags'
 let g:tagbar_silent=1
 
 " tcomment_vim *****************************************************************
+autocmd FileType c let g:tcomment#options = {'count': 2}
+autocmd FileType cpp let g:tcomment#options = {'count': 2}
 let g:tcomment_maps = 0
 let g:tcomment_mapleader1 = ''
 let g:tcomment_mapleader2 = ''
@@ -112,7 +115,7 @@ let g:tcomment_mapleader_uncomment_anyway = ''
 let g:tcomment_mapleader_comment_anyway = ''
 let g:tcomment_map_modifier = ''
 let g:tcomment_opmap_modifier = ''
-vnoremap gc :TCommentBlock count=2<cr>
+vnoremap gc :TCommentBlock<cr>
 nnoremap gc :TComment<cr>
 
 " DoxygenToolkit.vim ***********************************************************

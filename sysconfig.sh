@@ -20,8 +20,8 @@ sudo cp /home/sv/sv_etc/etc/mirrorlist /etc/pacman.d/ -rvf
 sudo cp /home/sv/sv_etc/etc/resolv.conf /etc/ -rvf
 # sudo chattr +i /etc/resolv.conf 
 sudo rm /etc/ssh -rvf
-sudo pacman -Syyu
-sudo pacman -S sway pulseaudio-alsa xclip nodejs alacritty npm \
+sudo pacman -Syyu --noconfirm
+sudo pacman -S --noconfirm sway pulseaudio-alsa xclip nodejs alacritty npm \
 		fcitx5 fcitx5-gtk fcitx5-qt alsa-utils unzip zip\
 		wlroots xorg-xwayland wayland-protocols wayland ctags fcitx5-configtool \
 		translate-shell zsh wl-clipboard grim slurp sshfs nfs-utils lib32-gcc-libs \
