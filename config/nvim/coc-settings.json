@@ -5,7 +5,6 @@
 "suggest.floatEnable": false,
 "signature.enable": false,
 "translator.engines":[
-	"google",
 	"youdao"
 ]
 }

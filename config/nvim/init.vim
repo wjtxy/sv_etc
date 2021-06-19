@@ -1,17 +1,99 @@
 "let mapleader=","
 
 call plug#begin('~/.config/nvim/autoload')
-Plug 'vim-scripts/a.vim'
+Plug 'vim-scripts/a.vim' " move to .c and .h
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/tagbar'
-Plug 'tomtom/tcomment_vim'
+Plug 'tomtom/tcomment_vim' " comment
 Plug 'babaybus/DoxygenToolkit.vim'
-Plug 'mhinz/vim-signify'
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'luochen1990/rainbow'
-Plug 'jackguo380/vim-lsp-cxx-highlight'
-Plug 'drewtempelmeyer/palenight.vim'
+Plug 'mhinz/vim-signify' " view git/svn sign at left
+Plug 'ludovicchabant/vim-gutentags' " create tags
+Plug 'luochen1990/rainbow' " color ()
+Plug 'jackguo380/vim-lsp-cxx-highlight' " highlight lsp
+Plug 'drewtempelmeyer/palenight.vim' " theme
+" file browser
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'kristijanhusak/defx-icons'
+Plug 'kristijanhusak/defx-git'
 call plug#end()
+
+" defx *************************************************************************
+call defx#custom#option('_', {
+	\ 'columns': 'mark:git:icons:filename:type:size:time',
+	\ 'ignored_files':
+	\     '*.swp,*.o,*.cmd,.*',
+	\ 'buffer_name': '',
+	\ 'new': 1
+	\ })
+autocmd FileType defx call s:defx_my_settings()
+function! s:defx_my_settings() abort
+	" Define mappings
+	nnoremap <silent><buffer><expr> <CR>
+	\ defx#do_action('open')
+	nnoremap <silent><buffer><expr> c
+	\ defx#do_action('copy')
+	nnoremap <silent><buffer><expr> m
+	\ defx#do_action('move')
+	nnoremap <silent><buffer><expr> p
+	\ defx#do_action('paste')
+	nnoremap <silent><buffer><expr> l
+	\ defx#do_action('open')
+	nnoremap <silent><buffer><expr> P
+	\ defx#do_action('preview')
+	nnoremap <silent><buffer><expr> o
+	\ defx#do_action('open_tree', 'toggle')
+	nnoremap <silent><buffer><expr> K
+	\ defx#do_action('new_directory')
+	nnoremap <silent><buffer><expr> N
+	\ defx#do_action('new_file')
+	nnoremap <silent><buffer><expr> d
+	\ defx#do_action('remove')
+	nnoremap <silent><buffer><expr> r
+	\ defx#do_action('rename')
+	nnoremap <silent><buffer><expr> !
+	\ defx#do_action('execute_command')
+	nnoremap <silent><buffer><expr> yy
+	\ defx#do_action('yank_path')
+	nnoremap <silent><buffer><expr> .
+	\ defx#do_action('toggle_ignored_files')
+	nnoremap <silent><buffer><expr> h
+	\ defx#do_action('cd', ['..'])
+	nnoremap <silent><buffer><expr> ~
+	\ defx#do_action('cd')
+	nnoremap <silent><buffer><expr> q
+	\ defx#do_action('quit')
+	nnoremap <silent><buffer><expr> <Space>
+	\ defx#do_action('toggle_select') . 'j'
+	nnoremap <silent><buffer><expr> *
+	\ defx#do_action('toggle_select_all')
+	nnoremap <silent><buffer><expr> j
+	\ line('.') == line('$') ? 'gg' : 'j'
+	nnoremap <silent><buffer><expr> k
+	\ line('.') == 1 ? 'G' : 'k'
+	nnoremap <silent><buffer><expr> <C-g>
+	\ defx#do_action('print')
+	nnoremap <silent><buffer><expr> cd
+	\ defx#do_action('change_vim_cwd')
+endfunction
+" defx-icons *******************************************************************
+let g:defx_icons_directory_icon = 'd'
+let g:defx_icons_parent_icon = '<<'
+let g:defx_icons_default_icon = ' '
+let g:defx_icons_copy_icon = ' '
+let g:defx_icons_link_icon = ' '
+let g:defx_icons_move_icon = ' '
+let g:defx_icons_directory_symlink_icon = ' '
+" defx-git *..******************************************************************
+call defx#custom#column('git', 'indicators', {
+  \ 'Modified'  : 'm',
+  \ 'Staged'    : '+',
+  \ 'Untracked' : ' ',
+  \ 'Renamed'   : ' ',
+  \ 'Unmerged'  : '═',
+  \ 'Ignored'   : 'i',
+  \ 'Deleted'   : 'x',
+  \ 'Unknown'   : '?'
+  \ })
 
 " tagbar ***********************************************************************
 let g:tagbar_sort = 0

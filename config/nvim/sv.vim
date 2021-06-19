@@ -1,14 +1,16 @@
 
-" 显示c函数
-nnoremap ff :call ShowFuncName() <CR>
-nnoremap <F2> :set nonumber<cr>
-map <c-]> g<c-]>
+nnoremap Q q
+nnoremap q <Nop>
+nnoremap q :q<cr>
+nnoremap H <Nop>
+nnoremap L <Nop>
+nnoremap J <Nop>
 
+nnoremap ff :call ShowFuncName()<cr>
 nnoremap gw <c-w>w
 nnoremap gs :split<cr>
 nnoremap <c-t> :%s/<C-R>=expand("<cword>")<cr>//g<left><left>
 vnoremap <c-t> y:%s/<C-R>"//g<left><left>
-
 nnoremap zi o<esc>A{<esc>o}<esc>O
 nnoremap zI A{<esc>o};<esc>O
 nnoremap ;; A;<esc>
@@ -16,6 +18,7 @@ inoremap ;; <esc>A;<esc>
 vnoremap z( s()<esc><left>p
 vnoremap z' s''<esc><left>p
 vnoremap z" s""<esc><left>p
+nnoremap <c-]> g<c-]>
 
 nnoremap <c-k> 4k
 nnoremap <c-j> 4j
@@ -29,12 +32,9 @@ inoremap <c-k> <up>
 inoremap <c-j> <down>
 inoremap <c-h> <left>
 inoremap <c-l> <right>
-inoremap <c-o> <esc>o
-map J j
 
 " configure *************************************************************************
 set autochdir " 自动设当前编辑的文件所在目录为当前工作路径
-" 代码折叠
 set nofoldenable
 set foldlevel=99
 set fdm=syntax
