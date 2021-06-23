@@ -1,5 +1,5 @@
 #!/bin/bash
-pacman -S --noconfirm dhcpcd wpa_supplicant sudo efibootmgr grub base-devel neovim zsh
+pacman -S --noconfirm dhcpcd wpa_supplicant sudo efibootmgr grub neovim
 ln -sf /usr/bin/nvim /usr/bin/vim
 ln -sf /usr/bin/nvim /usr/bin/vi
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
