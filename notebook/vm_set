@@ -1,4 +1,4 @@
 //挂载vm所有共享文件夹
 sudo vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other
 //挂载sharedfolder目录
-sudo vmhgfs-fuse .host:/sharedfolder /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other
+sudo vmhgfs-fuse .host:/mnt /home/sv/xm -o subtype=vmhgfs-fuse,allow_other
