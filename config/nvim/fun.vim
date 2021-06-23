@@ -3,6 +3,7 @@ autocmd BufNewFile *.sh exec ":call Set_sh_Title()"
 autocmd BufNewFile *.py exec ":call Set_py_Title()" 
 autocmd BufNewFile *.h exec ":call Set_h_Title()"
 autocmd BufWinEnter * silent call Try_exit_empty_buf()
+autocmd BufWinEnter * silent call Copy_clang_format()
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " ******************************************************************************
@@ -28,6 +29,7 @@ endfunc
 
 " ******************************************************************************
 func Copy_clang_format()
+try
 	let l:buf_dir = expand('%:p:h', 1)
 	if g:gutentags_resolve_symlinks
 		let l:buf_dir = fnamemodify(resolve(expand('%:p', 1)), ':p:h')
@@ -40,6 +42,8 @@ func Copy_clang_format()
 			call system(b:clang_cormat_copy_command)
 		endif
 	endif
+catch
+endtry
 endfunc
 
 " ******************************************************************************
