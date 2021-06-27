@@ -29,7 +29,7 @@ sudo pacman -S --noconfirm sway pulseaudio-alsa xclip nodejs alacritty npm \
 		clash wl-clipboard the_silver_searcher bc lzop subversion \
 		wqy-microhei wqy-microhei-lite wqy-bitmapfont wqy-zenhei ttf-arphic-ukai \
 		ttf-arphic-uming noto-fonts-cjk cpio rsync fcitx5-rime wget\
-		openssl openssh lib32-zlib yay\
+		openssl openssh lib32-zlib yay unclutter\
 		fcitx5-material-color fcitx5-mozc minicom htop neofetch \
 		rubygems man dmenu fuse2 
 #kde-dev-utils
@@ -49,8 +49,6 @@ sudo systemctl enable sshd.service
 sudo cp /home/sv/sv_etc/etc/sshd_config /etc/ssh -rvf
 sudo npm install -g neovim
 gem install neovim
-## cp /home/sv/sv_etc/.bashrc /home/sv -rvf
-## source /home/sv/.bashrc
 ## clash &
 ## gic https://github.com/zsh-users/zsh-autosuggestions /home/sv/zsh-autosuggestions
 ## gic https://github.com/zsh-users/zsh-syntax-highlighting /home/sv/zsh-syntax-highlighting

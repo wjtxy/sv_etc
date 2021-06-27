@@ -79,7 +79,7 @@ function! s:defx_my_settings() abort
 endfunction
 " defx-icons *******************************************************************
 let g:defx_icons_directory_icon = '+'
-let g:defx_icons_parent_icon = '<<'
+let g:defx_icons_parent_icon = '<'
 let g:defx_icons_default_icon = ' '
 let g:defx_icons_copy_icon = ' '
 let g:defx_icons_link_icon = ' '
