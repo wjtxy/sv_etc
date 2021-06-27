@@ -8,12 +8,12 @@ hi LineNr  guibg=NONE guibg=NONE
 hi SignColumn ctermbg=NONE guibg=NONE
 
 " statusline *************************************************************
-set statusline=%1*\%<%.50F\             "显示文件名和文件路径 (%<应该可以去掉)
+set statusline=%1*\%.40F\          "显示文件名和文件路径
 set statusline+=%=%2*\ %y%m%r%h%w\%*        "显示文件类型及文件状态
 set statusline+=%3*\ %{&ff}\[%{&fenc}]\%*   "显示文件编码类型
 "set statusline+=%4*\ row:%l/%L,col:%c\%*   "显示光标所在行和列
 set statusline+=%4*\ %L/col:%c\%*   "显示光标所在行和列
-set statusline+=%5*\ %3p%%\%*            "显示光标前文本所占总文本的比例
+set statusline+=%5*\%3p%%\%*            "显示光标前文本所占总文本的比例
 set statusline+=%6*\ %{gutentags#statusline('[',']')}\%*
 
 set termguicolors

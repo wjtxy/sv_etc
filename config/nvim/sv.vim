@@ -34,7 +34,7 @@ inoremap <c-h> <left>
 inoremap <c-l> <right>
 
 " configure *************************************************************************
-set autochdir " 自动设当前编辑的文件所在目录为当前工作路径
+set autochdir
 set nofoldenable
 set foldlevel=99
 set fdm=syntax

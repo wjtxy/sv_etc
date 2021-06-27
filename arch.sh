@@ -1,5 +1,5 @@
 #!/bin/bash
-pacman -S dhcpcd wpa_supplicant sudo efibootmgr grub base-devel neovim zsh
+pacman -S --noconfirm dhcpcd wpa_supplicant sudo efibootmgr grub neovim
 ln -sf /usr/bin/nvim /usr/bin/vim
 ln -sf /usr/bin/nvim /usr/bin/vi
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
@@ -14,6 +14,6 @@ useradd -G wheel sv
 grub-install --target=x86_64-efi --efi-directory=/boot
 grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable dhcpcd
-pacman -S intel-ucode 
+pacman -S --noconfirm intel-ucode 
 echo "please set root passwd"
 echo "please set sv passwd"
