@@ -24,7 +24,7 @@ sudo pacman -S --noconfirm sway dmenu xclip wl-clipboard alacritty nodejs npm \
 		wqy-microhei wqy-microhei-lite wqy-bitmapfont wqy-zenhei ttf-arphic-ukai \
 		ttf-arphic-uming noto-fonts-cjk rubygems translate-shell man \
 		fcitx5 fcitx5-gtk fcitx5-qt fcitx5-material-color fcitx5-mozc \
-		fcitx5-configtool fcitx5-rime pulseaudio-alsa alsa-utils
+		fcitx5-configtool fcitx5-rime pulseaudio-alsa alsa-utils unclutter
 
 sudo cp /home/sv/sv_etc/etc/* /etc/ -rvf
 sudo chattr +i /etc/resolv.conf 
@@ -38,13 +38,12 @@ npm config set registry https://registry.npm.taobao.org
 sudo npm install -g neovim
 gem install neovim
 
-git config --global user.email "1092347553@qq.com"
-git config --global user.name "vivy89"
+# git config --global user.email "1092347553@qq.com"
+# git config --global user.name "vivy89"
 git config --global oh-my-zsh.hide-dirty 1 
 git config --global credential.helper store 
 sudo systemctl start sshd.service
 sudo systemctl enable sshd.service
 
-## clash &
 ## gic https://github.com/zsh-users/zsh-autosuggestions /home/sv/zsh-autosuggestions
 ## gic https://github.com/zsh-users/zsh-syntax-highlighting /home/sv/zsh-syntax-highlighting
