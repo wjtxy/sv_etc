@@ -7,6 +7,7 @@ fi
 sudo cp /home/sv/sv_etc/script/cpu_pf.service /usr/lib/systemd/system/ -rvf
 sudo systemctl enable cpu_pf.service
 sudo systemctl start cpu_pf.service
+
 sudo mkdir -p /root/.config
 mkdir /home/sv/.config
 cp /home/sv/sv_etc/.pam_environment /home/sv/.pam_environment -rvf
@@ -16,16 +17,12 @@ sudo ln -sf /home/sv/sv_etc/script/chrome.sh /usr/bin/chrome.sh
 sudo ln -sf /home/sv/sv_etc/script/alacritty.sh /usr/bin/alacritty.sh
 sudo rm /etc/ssh -rvf
 
+sudo cp /home/sv/sv_etc/etc/pacman* /etc/ -rvf
 sudo pacman -Syyu --noconfirm
 sudo pacman -S --noconfirm sway dmenu xclip wl-clipboard alacritty nodejs npm \
-		wlroots xorg-xwayland wayland-protocols wayland ctags zsh grim slurp \
-		clash base-devel lib32-gcc-libs the_silver_searcher bc lzop subversion \
-		yay cpio rsync wget python3 python2 python-pip openssl openssh lib32-zlib \
-		wqy-microhei wqy-microhei-lite wqy-bitmapfont wqy-zenhei ttf-arphic-ukai \
-		ttf-arphic-uming noto-fonts-cjk rubygems translate-shell man \
-		fcitx5 fcitx5-gtk fcitx5-qt fcitx5-material-color fcitx5-mozc \
-		fcitx5-configtool fcitx5-rime pulseaudio-alsa alsa-utils unclutter
-
+		wlroots xorg-xwayland wayland-protocols wayland clang zsh grim slurp \
+		python3 python2 python-pip openssl openssh base-devel clash rubygems 
+		
 sudo cp /home/sv/sv_etc/etc/* /etc/ -rvf
 sudo chattr +i /etc/resolv.conf 
 
@@ -44,6 +41,3 @@ git config --global oh-my-zsh.hide-dirty 1
 git config --global credential.helper store 
 sudo systemctl start sshd.service
 sudo systemctl enable sshd.service
-
-## gic https://github.com/zsh-users/zsh-autosuggestions /home/sv/zsh-autosuggestions
-## gic https://github.com/zsh-users/zsh-syntax-highlighting /home/sv/zsh-syntax-highlighting
