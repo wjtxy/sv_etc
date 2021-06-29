@@ -21,3 +21,4 @@ pacman -S --noconfirm intel-ucode
 echo "please set root passwd"
 echo "please set sv passwd"
 echo "please enter visudo"
+chown -R sv /home/sv
