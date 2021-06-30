@@ -1,10 +1,22 @@
 {
-"clangd.semanticHighlighting": true,
 "diagnostic.enableSign": true,
 "diagnostic.warningSign": "",
 "suggest.floatEnable": false,
 "signature.enable": false,
 "translator.engines":[
 	"youdao"
-]
+],
+"languageserver": {
+	"ccls":{
+		"command": "ccls",
+		"filetypes": ["c", "cpp"],
+		"rootPatterns": ["compile_commands.json"],
+		"initializationOptions": {
+			"cache": {
+				"directory": "/tmp/ccls"
+			},
+			"highlight": {"lsRanges": true}
+		}
+	}
+}
 }

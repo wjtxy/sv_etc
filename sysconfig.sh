@@ -20,7 +20,7 @@ sudo rm /etc/ssh -rvf
 sudo cp /home/sv/sv_etc/etc/pacman* /etc/ -rvf
 sudo pacman -Syyu --noconfirm
 sudo pacman -S --noconfirm sway dmenu xclip wl-clipboard alacritty nodejs npm \
-		wlroots xorg-xwayland wayland-protocols wayland clang zsh grim slurp \
+		wlroots xorg-xwayland wayland-protocols wayland zsh \
 		python3 python2 python-pip openssl openssh base-devel clash rubygems 
 		
 sudo cp /home/sv/sv_etc/etc/* /etc/ -rvf
