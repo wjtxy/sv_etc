@@ -17,17 +17,6 @@ func! Try_exit_empty_buf()
 endfunc
 
 " ******************************************************************************
-func! Printf_hex_to_dec()
-	let l:cur_word = expand("<cword>")
-	:echo printf("%d", l:cur_word)
-endfunc
-" ******************************************************************************
-func! Printf_dec_to_hex()
-	let l:cur_word = expand("<cword>")
-	:echo printf("%#x", l:cur_word)
-endfunc
-
-" ******************************************************************************
 func Copy_clang_format()
 try
 	let l:buf_dir = expand('%:p:h', 1)

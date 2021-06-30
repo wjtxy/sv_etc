@@ -7,8 +7,8 @@ Plug 'babaybus/DoxygenToolkit.vim'
 Plug 'mhinz/vim-signify' " view git/svn sign at left
 Plug 'preservim/tagbar'
 Plug 'ludovicchabant/vim-gutentags' " create tags
-Plug 'jackguo380/vim-lsp-cxx-highlight' " highlight lsp
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jackguo380/vim-lsp-cxx-highlight' " highlight lsp
 Plug 'drewtempelmeyer/palenight.vim' " theme
 " file browser
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -16,6 +16,7 @@ Plug 'kristijanhusak/defx-icons'
 Plug 'kristijanhusak/defx-git'
 call plug#end()
 
+let g:lsp_cxx_hl_use_text_props = 0
 " tagbar ***********************************************************************
 let g:tagbar_sort = 0
 let g:tagbar_autoclose = 1

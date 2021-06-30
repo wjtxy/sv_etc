@@ -9,7 +9,6 @@ let g:coc_global_extensions = [
 			\'coc-snippets',
 			\'coc-highlight',
 			\'coc-floaterm',
-			\'coc-clangd',
 			\'coc-pairs']
 
 " Use tab for trigger completion with characters ahead and navigate.
