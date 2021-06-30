@@ -5,20 +5,24 @@ RM := rm
 
 TARGET := demo
 
+# *.c文件目录
 src_path :=  	.	\
 				./msdl
 
-inc_path := 	$(objs_path) \
+# *.h文件目录
+inc_path := 	$(src_path) \
 				./include
 
-define := -g3 -gdwarf-2
+define := -g
 inc := $(patsubst %, -I%, $(inc_path))
 CFLAGS := -c $(inc) $(define)
 
-libs :=			pthread	\
-				math
+# 库目录
+lib_path := 
 
-LIBS := $(patsubst %, -l%, $(libs))
+libs :=			pthread	\
+
+LIBS := $(patsubst %, -l%, $(libs)) $(patsubst %, -L%, $(lib_path))
 
 srcs := $(wildcard $(addsuffix /*.c, $(src_path)))
 OBJS := $(patsubst %.c, %.o, $(srcs))

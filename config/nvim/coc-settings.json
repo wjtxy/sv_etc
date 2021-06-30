@@ -13,7 +13,7 @@
 		"rootPatterns": ["compile_commands.json"],
 		"initializationOptions": {
 			"cache": {
-				"directory": "/tmp/ccls"
+				"directory": "/tmp/ccls-cache"
 			},
 			"highlight": {"lsRanges": true}
 		}

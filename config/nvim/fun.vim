@@ -4,7 +4,7 @@ autocmd BufNewFile *.py exec ":call Set_py_Title()"
 autocmd BufNewFile *.h exec ":call Set_h_Title()"
 autocmd BufWinEnter * silent call Try_exit_empty_buf()
 autocmd BufWinEnter * silent call Copy_clang_format()
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " ******************************************************************************
 let s:try_exit_empty_buf = 0
