@@ -8,7 +8,6 @@ let g:coc_global_extensions = [
 			\'coc-diagnostic', 
 			\'coc-snippets',
 			\'coc-highlight',
-			\'coc-floaterm',
 			\'coc-pairs']
 
 " Use tab for trigger completion with characters ahead and navigate.

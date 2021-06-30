@@ -1,6 +1,6 @@
 " tcomment_vim *****************************************************************
 " autocmd FileType c let g:tcomment#options = {'count': 2}
-" autocmd FileType cpp let g:tcomment#options = {'count': 2, 'as': 'c'}
+autocmd FileType cpp let g:tcomment#options = {'as': 'c'}
 let g:tcomment_maps = 0
 let g:tcomment_mapleader1 = ''
 let g:tcomment_mapleader2 = ''
