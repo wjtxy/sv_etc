@@ -5,19 +5,20 @@ nnoremap q :q<cr>
 nnoremap H <Nop>
 nnoremap L <Nop>
 nnoremap J <Nop>
+inoremap <c-o> <Nop>
 
 nnoremap ff :call ShowFuncName()<cr>
 nnoremap gw <c-w>w
 nnoremap gs :split<cr>
 nnoremap <c-t> :%s/<C-R>=expand("<cword>")<cr>//g<left><left>
 vnoremap <c-t> y:%s/<C-R>"//g<left><left>
-nnoremap zi o<esc>A{<esc>o}<esc>O
-nnoremap zI A{<esc>o};<esc>O
-nnoremap z; A;<esc>
-inoremap z; <esc>A;<esc>
-vnoremap z( s()<esc><left>p
-vnoremap z' s''<esc><left>p
-vnoremap z" s""<esc><left>p
+nnoremap ri o<esc>A{<esc>o}<esc>O
+nnoremap rI A{<esc>o};<esc>O
+nnoremap r; A;<esc>
+inoremap r; <esc>A;<esc>
+vnoremap r( s()<esc><left>p
+vnoremap r' s''<esc><left>p
+vnoremap r" s""<esc><left>p
 nnoremap <c-]> g<c-]>
 
 nnoremap <c-k> 4k

@@ -24,9 +24,6 @@ let g:tagbar_show_balloon = 0
 let g:tagbar_ctags_bin = 'ctags'
 let g:tagbar_silent=1
 
-" DoxygenToolkit.vim ***********************************************************
-let g:DoxygenToolkit_authorName="vivy89"
-
 " vim-signify ******************************************************************
 nnoremap fd :SignifyDiff<cr>    
 nmap fj <plug>(signify-next-hunk)    
