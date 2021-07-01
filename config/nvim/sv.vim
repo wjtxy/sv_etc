@@ -13,8 +13,8 @@ nnoremap <c-t> :%s/<C-R>=expand("<cword>")<cr>//g<left><left>
 vnoremap <c-t> y:%s/<C-R>"//g<left><left>
 nnoremap zi o<esc>A{<esc>o}<esc>O
 nnoremap zI A{<esc>o};<esc>O
-nnoremap ;; A;<esc>
-inoremap ;; <esc>A;<esc>
+nnoremap z; A;<esc>
+inoremap z; <esc>A;<esc>
 vnoremap z( s()<esc><left>p
 vnoremap z' s''<esc><left>p
 vnoremap z" s""<esc><left>p

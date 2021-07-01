@@ -1,11 +1,4 @@
 {
-"diagnostic.enableSign": true,
-"diagnostic.warningSign": "",
-"suggest.floatEnable": false,
-"signature.enable": false,
-"translator.engines":[
-	"youdao"
-],
 "languageserver": {
 	"ccls":{
 		"command": "ccls",
@@ -18,5 +11,11 @@
 			"highlight": {"lsRanges": true}
 		}
 	}
-}
+},
+"diagnostic.enableSign": true,
+"diagnostic.warningSign": "",
+"signature.preferShownAbove": false,
+"translator.engines":[
+	"youdao"
+]
 }

@@ -8,6 +8,7 @@ let g:coc_global_extensions = [
 			\'coc-diagnostic', 
 			\'coc-snippets',
 			\'coc-highlight',
+			\'coc-markdownlint',
 			\'coc-pairs']
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -33,8 +34,8 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 vmap <silent> gp <Plug>(coc-format-selected)
 nmap <silent> gp <Plug>(coc-format)
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> gi <Plug>(coc-diagnostic-prev)
+nmap <silent> gn <Plug>(coc-diagnostic-next)
 nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 

@@ -29,13 +29,14 @@ OBJS := $(patsubst %.c, %.o, $(srcs))
 
 all:$(TARGET)
 	
-$(TARGET):$(OBJS)
-	$(GCC) $(LIBS) -o $@ $^
+$(TARGET):$(OBJS) FORCE
+	$(GCC) $(LIBS) -o $@ $<
 
 %.o:%.c
 	$(GCC) $(CFLAGS) -o $@ $^
 
-.PHONY:clean
+FORCE:
+.PHONY:FORCE clean all 
 clean:
 	@$(RM) $(TARGET) $(OBJS) -rvf
 

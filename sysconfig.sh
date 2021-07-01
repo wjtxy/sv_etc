@@ -19,9 +19,10 @@ sudo rm /etc/ssh -rvf
 
 sudo cp /home/sv/sv_etc/etc/pacman* /etc/ -rvf
 sudo pacman -Syyu --noconfirm
-sudo pacman -S --noconfirm sway dmenu xclip wl-clipboard alacritty nodejs npm \
+sudo pacman -S --noconfirm sway dmenu xclip wl-clipboard alacritty \
 		wlroots xorg-xwayland wayland-protocols wayland zsh \
-		python3 python2 python-pip openssl openssh base-devel clash rubygems 
+		nodejs npm yarn rubygems \
+		python3 python2 python-pip openssl openssh base-devel clash 
 		
 sudo cp /home/sv/sv_etc/etc/* /etc/ -rvf
 sudo chattr +i /etc/resolv.conf 
