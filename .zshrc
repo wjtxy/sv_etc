@@ -19,11 +19,19 @@ alias t="trans  en:zh"
 alias gic="git clone --depth=1" 
 alias gis="git status" 
 alias gim="git commit -m "
+alias cptoetc="cp /home/sv/.config/nvim/*.vim /home/sv/sv_etc/config/nvim -rvf;\
+	cp /home/sv/.config/nvim/coc-settings.json /home/sv/sv_etc/config/nvim -rvf;\
+	cp /home/sv/.config/nvim/nvim.d /home/sv/sv_etc/config/nvim -rvf;\
+	cp /home/sv/.zshrc /home/sv/sv_etc/ -rvf"
+alias cpfrometc="cp /home/sv/sv_etc/config/nvim/*.vim /home/sv/.config/nvim -rvf;\
+	cp /home/sv/sv_etc/config/nvim/coc-settings.json /home/sv/.config/nvim -rvf;\
+	cp /home/sv/sv_etc/config/nvim/nvim.d /home/sv/.config/nvim -rvf;\
+	cp /home/sv/sv_etc/.zshrc /home/sv/ -rvf"
 
 bindkey '^ ' autosuggest-accept
 bindkey '^k' autosuggest-accept
 
-export PATH="$PATH:/home/sv/work/ebf_6ull_buildroot/output/host/bin:/opt/arm-xm-linux/usr/bin/:/opt/arm-xmv2-linux/usr/bin/"
+export PATH="$PATH:/opt/arm-gcc/bin/:/opt/arm-xm-linux/usr/bin/:/opt/arm-xmv2-linux/usr/bin/"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/arm-xm-linux/usr/lib/:/opt/arm-xmv2-linux/usr/lib/"
 
 # unset http_proxy
