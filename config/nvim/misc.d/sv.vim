@@ -89,3 +89,4 @@ let g:python3_host_prog = "/usr/bin/python3"
 filetype on
 filetype plugin on
 filetype indent on
+filetype plugin indent on

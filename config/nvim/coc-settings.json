@@ -15,7 +15,14 @@
 "diagnostic.enableSign": true,
 "diagnostic.warningSign": "",
 "signature.preferShownAbove": false,
+"coc.preferences.maxFileSize": "100MB",
+"coc.preferences.rootPatterns": [
+	".git",
+	"compile_commands.json"
+],
+"coc.source.word.filetypes": ["markdown", "text"],
 "translator.engines":[
+	"google",
 	"youdao"
 ]
 }
