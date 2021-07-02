@@ -47,10 +47,8 @@ set cmdheight=1
 set nomore
 set textwidth=90
 set nobackup
-" set undofile " 持久undo
 set noswapfile
 set directory=.
-set udir=~/.config/nvim/undo//
 set hidden
 set shortmess+=c
 set updatetime=100
@@ -73,6 +71,14 @@ set history=1000
 set hlsearch
 set ignorecase
 set smartindent
+if has("persistent_undo")
+   let target_path = expand('~/.cache/nvim/undo//')
+    if !isdirectory(target_path)
+        call mkdir(target_path, "p", 0700)
+    endif
+    let &undodir=target_path
+    set undofile
+endif
 
 " ******************************************************************************
 " let g:ruby_host_prog = '/home/sv/.gem/ruby/2.7.0/bin/neovim-ruby-host'

@@ -21,11 +21,13 @@ alias gis="git status"
 alias gim="git commit -m "
 alias cptoetc="cp /home/sv/.config/nvim/*.vim /home/sv/sv_etc/config/nvim -rvf;\
 	cp /home/sv/.config/nvim/coc-settings.json /home/sv/sv_etc/config/nvim -rvf;\
-	cp /home/sv/.config/nvim/nvim.d /home/sv/sv_etc/config/nvim -rvf;\
+	cp /home/sv/.config/nvim/plug.d /home/sv/sv_etc/config/nvim -rvf;\
+	cp /home/sv/.config/nvim/misc.d /home/sv/sv_etc/config/nvim -rvf;\
 	cp /home/sv/.zshrc /home/sv/sv_etc/ -rvf"
 alias cpfrometc="cp /home/sv/sv_etc/config/nvim/*.vim /home/sv/.config/nvim -rvf;\
 	cp /home/sv/sv_etc/config/nvim/coc-settings.json /home/sv/.config/nvim -rvf;\
-	cp /home/sv/sv_etc/config/nvim/nvim.d /home/sv/.config/nvim -rvf;\
+	cp /home/sv/sv_etc/config/nvim/plug.d /home/sv/.config/nvim -rvf;\
+	cp /home/sv/sv_etc/config/nvim/misc.d /home/sv/.config/nvim -rvf;\
 	cp /home/sv/sv_etc/.zshrc /home/sv/ -rvf"
 
 bindkey '^ ' autosuggest-accept

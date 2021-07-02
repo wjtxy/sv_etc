@@ -12,8 +12,14 @@ Plug 'drewtempelmeyer/palenight.vim' " theme
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' } " file browser
 Plug 'kristijanhusak/defx-icons'
 Plug 'kristijanhusak/defx-git'
+Plug 'mbbill/undotree'
 call plug#end()
 
+" undotree *********************************************************************
+nnoremap rr :UndotreeToggle<CR>
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_HighlightChangedWithSign = 0
+let g:undotree_HelpLine = 0
 " tagbar ***********************************************************************
 let g:tagbar_sort = 0
 let g:tagbar_autoclose = 1
@@ -28,11 +34,11 @@ nmap fk <plug>(signify-prev-hunk)
 let g:signify_vcs_list = ['git','svn']
 
 " *.vim **************************************************************************
-source /home/sv/.config/nvim/nvim.d/coc.vim
-source /home/sv/.config/nvim/nvim.d/defx.vim
-source /home/sv/.config/nvim/nvim.d/rainbow.vim
-source /home/sv/.config/nvim/nvim.d/tcomment.vim
-source /home/sv/.config/nvim/nvim.d/gutentags.vim
-source /home/sv/.config/nvim/sv.vim
-source /home/sv/.config/nvim/fun.vim
-source /home/sv/.config/nvim/theme.vim
+source /home/sv/.config/nvim/plug.d/coc.vim
+source /home/sv/.config/nvim/plug.d/defx.vim
+source /home/sv/.config/nvim/plug.d/rainbow.vim
+source /home/sv/.config/nvim/plug.d/tcomment.vim
+source /home/sv/.config/nvim/plug.d/gutentags.vim
+source /home/sv/.config/nvim/misc.d/sv.vim
+source /home/sv/.config/nvim/misc.d/fun.vim
+source /home/sv/.config/nvim/misc.d/theme.vim
