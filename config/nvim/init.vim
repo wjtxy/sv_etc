@@ -16,9 +16,9 @@ Plug 'mbbill/undotree'
 Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 Plug 'ferrine/md-img-paste.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'voldikss/vim-codelf'
 call plug#end()
 " ******************************************************************************
-
 
 " *.vim ************************************************************************
 source /home/sv/.config/nvim/plug.d/else.vim

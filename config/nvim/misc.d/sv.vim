@@ -12,8 +12,8 @@ nnoremap gw <c-w>w
 nnoremap gs :split<cr>
 nnoremap <c-t> :%s/<C-R>=expand("<cword>")<cr>//g<left><left>
 vnoremap <c-t> y:%s/<C-R>"//g<left><left>
-nnoremap ri o<esc>A{<esc>o}<esc>O
-nnoremap rI A{<esc>o};<esc>O
+nnoremap ro o<esc>A{<esc>o}<esc>O
+nnoremap rO A{<esc>o};<esc>O
 nnoremap r; A;<esc>
 vnoremap r( s()<esc><left>p
 vnoremap r' s''<esc><left>p
