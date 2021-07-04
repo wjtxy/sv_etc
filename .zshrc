@@ -36,6 +36,7 @@ bindkey '^k' autosuggest-accept
 export PATH="$PATH:/opt/arm-gcc/bin/:/opt/arm-xm-linux/usr/bin/:/opt/arm-xmv2-linux/usr/bin/"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/arm-xm-linux/usr/lib/:/opt/arm-xmv2-linux/usr/lib/"
 
+alias unproxy="unset http_proxy;unset https_proxy"
 # unset http_proxy
 # unset https_proxy
 export http_proxy=127.0.0.1:7890
