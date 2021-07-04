@@ -16,7 +16,7 @@ set $right l
 set $term alacritty.sh
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-output * bg /home/sv/sv_etc/image/buloniya.png fill
+output * bg /home/sv/pCloudDrive/image/20210704_04h39m02s_grim_kulou.png fill
 
 input * {
 	xkb_options caps:swapescape
@@ -30,6 +30,8 @@ input * {
 #capture screen
 	bindsym $mod+Shift+g exec grim -g "$(slurp)" - | wl-copy
 	bindsym $mod+g exec grim -g "$(slurp)"
+	bindsym $mod+p exec grim
+
     # Start a terminasplitvl
     bindsym $mod+Return exec $term
     bindsym $mod+Shift+q kill
