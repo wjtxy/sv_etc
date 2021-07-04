@@ -1,0 +1,35 @@
+{
+	"$schema": "https://joplinapp.org/schema/settings.json",
+	"locale": "en_US",
+	"api.token": "fe91e0172e6f8cc5d3e7037684ab777ebe1c3642f962b646310172c2b526734ad1259ac998be02f5d802cfcd26bbce9733ff1af883d4d6d6b9a6da15ccdbeded",
+	"markdown.plugin.softbreaks": false,
+	"markdown.plugin.typographer": false,
+	"spellChecker.language": "en-US",
+	"ui.layout": {
+		"key": "root",
+		"children": [
+			{
+				"key": "sideBar",
+				"width": 250,
+				"visible": true
+			},
+			{
+				"key": "noteList",
+				"width": 250,
+				"visible": true
+			},
+			{
+				"key": "editor",
+				"visible": true
+			}
+		],
+		"visible": true
+	},
+	"noteVisiblePanes": [
+		"editor",
+		"viewer"
+	],
+	"sync.target": 6,
+	"sync.6.path": "https://webdav.pcloud.com/joplin",
+	"sync.6.username": "1092347553@qq.com"
+}
