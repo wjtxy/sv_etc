@@ -14,7 +14,8 @@ set $down j
 set $up k
 set $right l
 
-set $term alacritty.sh
+# set $term alacritty.sh
+set $term st
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 output * bg /home/sv/pCloudDrive/image/20210704_04h39m02s_grim_kulou.png fill

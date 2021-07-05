@@ -1,20 +1,12 @@
 " user func **********************************************************************
+nnoremap ff :call ShowFuncName()<cr>
+
 autocmd BufNewFile *.sh exec ":call Set_sh_Title()" 
 autocmd BufNewFile *.py exec ":call Set_py_Title()" 
 autocmd BufNewFile *.h exec ":call Set_h_Title()"
-" autocmd BufWinEnter * silent call Try_exit_empty_buf()
 autocmd BufWinEnter * silent call Copy_clang_format()
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" ******************************************************************************
-let s:try_exit_empty_buf = 0
-func! Try_exit_empty_buf()
-	if len(buffer_name()) == 0 && s:try_exit_empty_buf == 1 && winnr('$') == 1
-		exe "q"
-	else
-		let s:try_exit_empty_buf = 1
-	endif
-endfunc
 
 " ******************************************************************************
 func Copy_clang_format()

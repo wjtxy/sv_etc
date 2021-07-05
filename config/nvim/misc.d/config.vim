@@ -1,13 +1,12 @@
 
-nnoremap Q q
+nnoremap m q
 nnoremap q <Nop>
 nnoremap q :q<cr>
 nnoremap H <Nop>
 nnoremap L <Nop>
 nnoremap J <Nop>
-inoremap <c-o> <Nop>
+inoremap <c-o> <cr>
 
-nnoremap ff :call ShowFuncName()<cr>
 nnoremap gw <c-w>w
 nnoremap gs :split<cr>
 nnoremap <c-t> :%s/<C-R>=expand("<cword>")<cr>//g<left><left>
