@@ -15,6 +15,7 @@ cp /home/sv/sv_etc/config/* /home/sv/.config/ -rvf
 sudo ln -sf /home/sv/.config/nvim /root/.config/nvim
 sudo ln -sf /home/sv/sv_etc/script/chrome.sh /usr/bin/chrome.sh
 sudo ln -sf /home/sv/sv_etc/script/alacritty.sh /usr/bin/alacritty.sh
+sudo ln -sf /home/sv/sv_etc/script/pcloud /usr/bin/pcloud
 sudo rm /etc/ssh -rvf
 
 sudo cp /home/sv/sv_etc/etc/pacman* /etc/ -rvf

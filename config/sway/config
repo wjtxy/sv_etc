@@ -1,5 +1,6 @@
 # Read `man 5 sway` for a complete reference.
 
+exec pcloud
 exec fcitx5
 exec clash
 exec unclutter --timeout 1
