@@ -38,10 +38,10 @@ function! s:defx_my_settings() abort
 	\ defx#do_action('toggle_select') . 'j'
 	nnoremap <silent><buffer><expr> *
 	\ defx#do_action('toggle_select_all')
-	nnoremap <silent><buffer><expr> <C-g>
-	\ defx#do_action('print')
+	nnoremap <silent><buffer><expr> nn
+	\ defx#do_action('cd', ['/home/sv/pCloudDrive/note'])
 	nnoremap <silent><buffer><expr> cd
-	\ defx#do_action('change_vim_cwd')
+	\ defx#do_action('cd', ['/home/sv'])
 	nnoremap <silent><buffer><expr> <CR>
 	\ defx#do_action('open')
 	nnoremap <silent><buffer><expr> l
@@ -49,9 +49,9 @@ function! s:defx_my_settings() abort
 	nnoremap <silent><buffer><expr> h
 	\ defx#do_action('cd', ['..'])
 	nnoremap <silent><buffer><expr> j
-	\ line('.') == line('$') ? 'gg' : 'j'
+	\  'j'
 	nnoremap <silent><buffer><expr> k
-	\ line('.') == 1 ? 'G' : 'k'
+	\  'k'
 	" nnoremap <silent><buffer><expr> ~
 	" \ defx#do_action('cd')
 	" nnoremap <silent><buffer><expr> o
