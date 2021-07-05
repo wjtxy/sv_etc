@@ -1,4 +1,5 @@
 " defx *************************************************************************
+nnoremap rm :Defx<cr>
 autocmd VimEnter * if argc() == 0 | :Defx | endif
 call defx#custom#option('_', {
 	\ 'columns': 'mark:git:icons:filename:type:size:time',
@@ -38,8 +39,6 @@ function! s:defx_my_settings() abort
 	\ defx#do_action('toggle_select') . 'j'
 	nnoremap <silent><buffer><expr> *
 	\ defx#do_action('toggle_select_all')
-	nnoremap <silent><buffer><expr> nn
-	\ defx#do_action('cd', ['/home/sv/pCloudDrive/note'])
 	nnoremap <silent><buffer><expr> cd
 	\ defx#do_action('cd', ['/home/sv'])
 	nnoremap <silent><buffer><expr> <CR>
@@ -52,10 +51,6 @@ function! s:defx_my_settings() abort
 	\  'j'
 	nnoremap <silent><buffer><expr> k
 	\  'k'
-	" nnoremap <silent><buffer><expr> ~
-	" \ defx#do_action('cd')
-	" nnoremap <silent><buffer><expr> o
-	" \ defx#do_action('open_tree', 'toggle')
 endfunction
 
 " defx-icons *******************************************************************
@@ -78,5 +73,4 @@ call defx#custom#column('git', 'indicators', {
   \ 'Deleted'   : 'x',
   \ 'Unknown'   : '?'
   \ })
-
 
