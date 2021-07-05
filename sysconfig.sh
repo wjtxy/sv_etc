@@ -40,5 +40,6 @@ gem install neovim
 # git config --global user.name "vivy89"
 git config --global oh-my-zsh.hide-dirty 1 
 git config --global credential.helper store 
+git config --global init.defaultBranch main
 sudo systemctl start sshd.service
 sudo systemctl enable sshd.service

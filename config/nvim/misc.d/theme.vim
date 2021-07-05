@@ -1,5 +1,4 @@
 " theme *********************************************************************
-
 "colorscheme darkblue
 set background=dark
 colorscheme palenight
@@ -13,7 +12,7 @@ set statusline+=%=%2*\ %y%m%r%h%w\%*        "显示文件类型及文件状态
 set statusline+=%3*\ %{&ff}\[%{&fenc}]\%*   "显示文件编码类型
 "set statusline+=%4*\ row:%l/%L,col:%c\%*   "显示光标所在行和列
 set statusline+=%4*\ %L/col:%c\%*   "显示光标所在行和列
-set statusline+=%5*\%3p%%\%*            "显示光标前文本所占总文本的比例
+set statusline+=%5*\ %3p%%\%*            "显示光标前文本所占总文本的比例
 set statusline+=%6*\ %{gutentags#statusline('[',']')}\%*
 
 set termguicolors

@@ -14,9 +14,9 @@ Plug 'kristijanhusak/defx-icons'
 Plug 'kristijanhusak/defx-git'
 Plug 'mbbill/undotree'
 Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
+Plug 'liuchengxu/vim-which-key'
 call plug#end()
 " ******************************************************************************
-
 
 " *.vim ************************************************************************
 source /home/sv/.config/nvim/plug.d/coc.vim

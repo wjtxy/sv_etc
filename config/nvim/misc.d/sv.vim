@@ -1,11 +1,11 @@
 
-nnoremap Q q
+nnoremap m q
 nnoremap q <Nop>
 nnoremap q :q<cr>
 nnoremap H <Nop>
 nnoremap L <Nop>
 nnoremap J <Nop>
-inoremap <c-o> <Nop>
+inoremap <c-o> <cr>
 
 nnoremap ff :call ShowFuncName()<cr>
 nnoremap gw <c-w>w
@@ -15,7 +15,6 @@ vnoremap <c-t> y:%s/<C-R>"//g<left><left>
 nnoremap ri o<esc>A{<esc>o}<esc>O
 nnoremap rI A{<esc>o};<esc>O
 nnoremap r; A;<esc>
-inoremap r; <esc>A;<esc>
 vnoremap r( s()<esc><left>p
 vnoremap r' s''<esc><left>p
 vnoremap r" s""<esc><left>p
