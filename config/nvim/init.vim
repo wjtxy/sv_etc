@@ -6,8 +6,6 @@ Plug 'vivy89/DoxygenToolkit.vim'
 Plug 'mhinz/vim-signify' " view git/svn sign at left
 Plug 'preservim/tagbar'
 Plug 'ludovicchabant/vim-gutentags' " create tags
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jackguo380/vim-lsp-cxx-highlight' " highlight lsp
 Plug 'drewtempelmeyer/palenight.vim' " theme
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' } " file browser
 Plug 'kristijanhusak/defx-icons'
@@ -18,13 +16,30 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'ferrine/md-img-paste.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'voldikss/vim-codelf'
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'} " statusline
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 call plug#end()
 " ******************************************************************************
+
+" lua require('nvim-compe')
+lua require('lsp')
+lua require('statusline')
+
+" theme *********************************************************************
+set background=dark
+colorscheme palenight
+hi Normal  guibg=NONE guibg=NONE
+set statusline=%1*\\      
+set termguicolors
+hi User1 gui=none guifg=red guibg=none
 
 " *.vim ************************************************************************
 source /home/sv/.config/nvim/plug.d/undo.vim
 source /home/sv/.config/nvim/plug.d/git.vim
-source /home/sv/.config/nvim/plug.d/coc.vim
 source /home/sv/.config/nvim/plug.d/defx.vim
 source /home/sv/.config/nvim/plug.d/rainbow.vim
 source /home/sv/.config/nvim/plug.d/tcomment.vim
@@ -34,4 +49,4 @@ source /home/sv/.config/nvim/plug.d/markdown.vim
 
 source /home/sv/.config/nvim/misc.d/config.vim
 source /home/sv/.config/nvim/misc.d/fun.vim
-source /home/sv/.config/nvim/misc.d/theme.vim
+source /home/sv/.config/nvim/misc.d/keymap.vim
