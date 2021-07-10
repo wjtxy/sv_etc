@@ -13,7 +13,7 @@ sudo pacman -S --noconfirm lib32-gcc-libs the_silver_searcher bc lzop \
 		fcitx5 fcitx5-gtk fcitx5-qt fcitx5-material-color fcitx5-mozc \
 		fcitx5-configtool fcitx5-rime pulseaudio-alsa alsa-utils nfs-utils \
 		clang grim slurp llvm ccls man man-pages joplin-desktop
-yay -S --noconfirm google-chrome bear
+yay -S --noconfirm google-chrome bear wechat-uos
 
 git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions /home/sv/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting /home/sv/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
