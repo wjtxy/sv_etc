@@ -25,9 +25,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 call plug#end()
 " ******************************************************************************
 
-" lua require('nvim-compe')
 lua require('lsp')
 lua require('statusline')
+lua require('hl')
 
 " theme *********************************************************************
 set background=dark
