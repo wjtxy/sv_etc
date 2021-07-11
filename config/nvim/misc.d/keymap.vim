@@ -6,7 +6,7 @@ inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 " general********************************************
-let g:mapleader="\<Space>"
+" let g:mapleader="\<Space>"
 nnoremap m q
 nnoremap q <Nop>
 nnoremap q :q<cr>

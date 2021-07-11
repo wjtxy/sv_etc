@@ -22,6 +22,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'junegunn/fzf.vim'
+Plug 'voldikss/vim-translator'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
@@ -32,6 +33,9 @@ Plug 'RishabhRD/popfix'
 Plug 'RishabhRD/nvim-lsputils'
 call plug#end()
 " ******************************************************************************
+
+nmap <silent> rt <Plug>TranslateW
+vmap <silent> rt <Plug>TranslateWV
 
 lua require('lsp')
 lua require('statusline')
