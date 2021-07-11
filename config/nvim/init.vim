@@ -16,18 +16,27 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'ferrine/md-img-paste.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'voldikss/vim-codelf'
+Plug 'glepnir/dashboard-nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'} " statusline
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'RishabhRD/popfix'
+Plug 'RishabhRD/nvim-lsputils'
 call plug#end()
 " ******************************************************************************
 
 lua require('lsp')
 lua require('statusline')
 lua require('hl')
+lua require('lsputil')
 
 " theme *********************************************************************
 set background=dark
@@ -46,6 +55,7 @@ source /home/sv/.config/nvim/plug.d/tcomment.vim
 source /home/sv/.config/nvim/plug.d/tags.vim
 source /home/sv/.config/nvim/plug.d/nvimgdb.vim
 source /home/sv/.config/nvim/plug.d/markdown.vim
+source /home/sv/.config/nvim/plug.d/dashboard.vim
 
 source /home/sv/.config/nvim/misc.d/config.vim
 source /home/sv/.config/nvim/misc.d/fun.vim

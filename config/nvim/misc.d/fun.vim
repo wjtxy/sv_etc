@@ -1,31 +1,30 @@
 " user func **********************************************************************
-nnoremap ff :call ShowFuncName()<cr>
 
 autocmd BufNewFile *.sh exec ":call Set_sh_Title()" 
 autocmd BufNewFile *.py exec ":call Set_py_Title()" 
 autocmd BufNewFile *.h exec ":call Set_h_Title()"
-autocmd BufWinEnter * silent call Copy_clang_format()
+" autocmd BufWinEnter * silent call Copy_clang_format()
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 
 " ******************************************************************************
-func Copy_clang_format()
-try
-	let l:buf_dir = expand('%:p:h', 1)
-	if g:gutentags_resolve_symlinks
-		let l:buf_dir = fnamemodify(resolve(expand('%:p', 1)), ':p:h')
-	endif
-	if !exists('g:nvim_root')
-		let b:nvim_root = gutentags#get_project_root(l:buf_dir)
-		let b:compile_commands_json = b:nvim_root . "/compile_commands.json"
-		if filereadable(b:compile_commands_json)    " 判断文件是否存在"
-			let b:clang_cormat_copy_command = "cp /home/sv/sv_etc/other/.clang-format " . b:nvim_root . " -rvf"
-			call system(b:clang_cormat_copy_command)
-		endif
-	endif
-catch
-endtry
-endfunc
+" func Copy_clang_format()
+" try
+" 	let l:buf_dir = expand('%:p:h', 1)
+" 	if g:gutentags_resolve_symlinks
+" 		let l:buf_dir = fnamemodify(resolve(expand('%:p', 1)), ':p:h')
+" 	endif
+" 	if !exists('g:nvim_root')
+" 		let b:nvim_root = gutentags#get_project_root(l:buf_dir)
+" 		let b:compile_commands_json = b:nvim_root . "/compile_commands.json"
+" 		if filereadable(b:compile_commands_json)    " 判断文件是否存在"
+" 			let b:clang_cormat_copy_command = "cp /home/sv/sv_etc/other/.clang-format " . b:nvim_root . " -rvf"
+" 			call system(b:clang_cormat_copy_command)
+" 		endif
+" 	endif
+" catch
+" endtry
+" endfunc
 
 " ******************************************************************************
 func Set_h_Title()
@@ -73,13 +72,3 @@ func Set_py_Title()
 	endif
 	normal G
 endfunc 
-
-" ******************************************************************************
-fun! ShowFuncName()
-  let lnum = line(".")
-  let col = col(".")
-  echohl ModeMsg
-  echo getline(search("^[^ \t#/]\\{2}.*[^:]\s*$", 'bW'))
-  echohl None
-  call search("\\%" . lnum . "l" . "\\%" . col . "c")
-endfun
