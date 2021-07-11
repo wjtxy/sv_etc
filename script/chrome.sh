@@ -6,4 +6,4 @@
 #########################################################################
 #!/bin/bash
 
-google-chrome-stable --proxy-server="socks5://127.0.01:7891;http://127.0.0.1:7890" 2>/dev/null
+google-chrome --proxy-server="socks5://127.0.01:7891;http://127.0.0.1:7890" 2>/dev/null

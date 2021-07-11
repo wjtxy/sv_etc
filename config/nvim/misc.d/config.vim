@@ -1,6 +1,6 @@
 set shortmess+=c
 set completeopt=menuone,noselect
-set autochdir
+" set autochdir
 set nofoldenable
 set fencs=utf-8,ucs-bom,shift-jis,gbk,gb2312,gb18030,cp936,ansi,latin1
 set termencoding=gbk,utf-8

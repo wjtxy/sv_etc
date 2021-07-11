@@ -20,9 +20,11 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+" Plug 'nvim-telescope/telescope-project.nvim'
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-translator'
+Plug 'jiangmiao/auto-pairs'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'

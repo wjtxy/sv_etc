@@ -1,3 +1,7 @@
+" telescope
+" lua require'telescope'.load_extension('project')
+
+" dashboard
 nnoremap <silent> ff :DashboardFindHistory<CR>
 " nnoremap <silent> ff :DashboardFindFile<CR>
 nnoremap <silent> rs :DashboardChangeColorscheme<CR>
