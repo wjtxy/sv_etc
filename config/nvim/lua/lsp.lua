@@ -31,7 +31,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { "clangd", 'vimls',  "jsonls" }
+local servers = { "clangd", 'vimls', "jsonls" ,"sumneko_lua"}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
  on_attach = on_attach,
@@ -121,4 +121,5 @@ vim.api.nvim_set_keymap('s', '<S-Tab>', 'v:lua.s_tab_complete()', { expr = true 
 -- Map compe confirm and complete functions
 vim.api.nvim_set_keymap('i', '<cr>', 'compe#confirm("<cr>")', { expr = true })
 vim.api.nvim_set_keymap('i', '<c-space>', 'compe#complete()', { expr = true })
+
 

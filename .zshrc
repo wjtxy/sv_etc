@@ -41,3 +41,5 @@ alias unproxy="unset http_proxy;unset https_proxy"
 # unset https_proxy
 export http_proxy=127.0.0.1:7890
 export https_proxy=127.0.0.1:7890
+
+alias luamake=/home/sv/app/lua-language-server/3rd/luamake/luamake

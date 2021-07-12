@@ -20,7 +20,6 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-" Plug 'nvim-telescope/telescope-project.nvim'
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-translator'
@@ -43,6 +42,7 @@ lua require('lsp')
 lua require('statusline')
 lua require('hl')
 lua require('lsputil')
+lua require('lua-lsp')
 
 " theme *********************************************************************
 set background=dark
@@ -51,6 +51,7 @@ hi Normal  guibg=NONE guibg=NONE
 set statusline=%1*\\      
 set termguicolors
 hi User1 gui=none guifg=red guibg=none
+
 
 " *.vim ************************************************************************
 source /home/sv/.config/nvim/plug.d/undo.vim

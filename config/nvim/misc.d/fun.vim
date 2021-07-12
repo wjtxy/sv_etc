@@ -6,7 +6,6 @@ autocmd BufNewFile *.h exec ":call Set_h_Title()"
 " autocmd BufWinEnter * silent call Copy_clang_format()
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-
 " ******************************************************************************
 " func Copy_clang_format()
 " try

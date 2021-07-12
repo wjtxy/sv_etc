@@ -38,6 +38,7 @@ sudo python -m pip install pynvim
 npm config set registry https://registry.npm.taobao.org
 sudo npm install -g neovim
 sudo npm install -g vim-language-server
+sudo npm i -g vscode-langservers-extracted
 gem install neovim
 
 # git config --global user.email "1092347553@qq.com"
@@ -48,4 +49,3 @@ git config --global init.defaultBranch main
 git config --global core.editor nvim
 sudo systemctl start sshd.service
 sudo systemctl enable sshd.service
-sudo npm i -g vscode-langservers-extracted

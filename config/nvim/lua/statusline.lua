@@ -1,18 +1,12 @@
 -- source provider function
 local colors = require('galaxyline.theme').default
 local diagnostic = require('galaxyline.provider_diagnostic')
-local vcs = require('galaxyline.provider_vcs')
-local fileinfo = require('galaxyline.provider_fileinfo')
-local extension = require('galaxyline.provider_extensions')
-local buffer = require('galaxyline.provider_buffer')
-local whitespace = require('galaxyline.provider_whitespace')
-local lspclient = require('galaxyline.provider_lsp')
-
-local GitBranch = vcs.get_git_branch
 
 require('galaxyline').section.left[1]= {
   FileName = {
-    provider = 'FileName',
+    provider = function()
+		return vim.api.nvim_eval('substitute(expand("%:p"),$HOME,"~","g")')
+	end,
     condition = function()
       if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
         return true
@@ -21,7 +15,7 @@ require('galaxyline').section.left[1]= {
       end,
     icon = '',
     highlight = {colors.red},
-    separator = '',
+    separator = ' ',
     separator_highlight = {colors.darkblue},
   }
 }
@@ -36,7 +30,7 @@ require('galaxyline').section.left[2]= {
       return false
       end,
     icon = '',
-    highlight = {colors.darkblue},
+    highlight = {colors.blue},
     separator = '',
     separator_highlight = {colors.darkblue},
   }
@@ -139,4 +133,5 @@ require('galaxyline').section.right[4]= {
     separator_highlight = {colors.darkblue},
   }
 }
+
 
