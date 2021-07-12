@@ -5,7 +5,7 @@
 nnoremap <silent> ff :DashboardFindHistory<CR>
 " nnoremap <silent> ff :DashboardFindFile<CR>
 nnoremap <silent> rs :DashboardChangeColorscheme<CR>
-nnoremap <silent> rw :DashboardFindWord<CR>
+nnoremap <silent> rw yiw:DashboardFindWord<CR>
 " nnoremap <silent> fb :DashboardJumpMark<CR>
 nnoremap <silent> rc :DashboardNewFile<CR>
 

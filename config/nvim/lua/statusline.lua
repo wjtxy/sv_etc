@@ -76,13 +76,13 @@ require('galaxyline').section.left[5]= {
 }
 
 -- right ********************************
-require('galaxyline').section.right[1]= {
+require('galaxyline').section.left[6]= {
   GetLspClient = {
     provider = 'GetLspClient',
     condition = function()
         return true
       end,
-    icon = '',
+    icon = ' ',
     highlight = {colors.cyan},
     separator = '',
     separator_highlight = {colors.darkblue},
@@ -98,9 +98,9 @@ require('galaxyline').section.right[2]= {
 		end
 		return false
       end,
-    icon = 'e:',
+    icon = ' ',
     highlight = {colors.red},
-    separator = ' ',
+    separator = '',
     separator_highlight = {colors.darkblue},
   }
 }
@@ -114,7 +114,7 @@ require('galaxyline').section.right[3]= {
 		end
 		return false
       end,
-    icon = 'w:',
+    icon = ' ',
     highlight = {colors.yellow},
     separator = '',
     separator_highlight = {colors.darkblue},

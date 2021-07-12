@@ -29,9 +29,12 @@ local on_attach = function(client, bufnr)
   --]]
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { "clangd", 'vimls', "jsonls" ,"sumneko_lua"}
+local servers = { "clangd", 'vimls', "jsonls" ,"sumneko_lua", "bashls"}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
  on_attach = on_attach,
@@ -41,11 +44,6 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
--- Enable the following language servers
-local servers = { 'clangd','pyright', 'tsserver' }
 for _, lsp in ipairs(servers) do
   require('lspconfig')[lsp].setup {
     -- You will probably want to add a custom on_attach here to locally map keybinds to buffers with an active client

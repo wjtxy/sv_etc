@@ -1,3 +1,0 @@
-#! /bin/bash
-vi -c "Man $1 $2" -c 'silent only'
-
