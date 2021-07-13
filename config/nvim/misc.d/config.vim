@@ -1,3 +1,12 @@
+set clipboard+=unnamedplus
+" let g:clipboard = {
+"             \'copy': { '*': 'wl-copy', '+': 'lemonade copy' },
+"             \'paste': { '*': 'wl-paste', '+': 'lemonade paste' },
+"             \'name': 'lemonade',
+" 			\'cache_enabled': 1,
+"             \}
+set cursorline
+set mouse=a
 set shortmess+=c
 set completeopt=menuone,noselect
 " set autochdir
@@ -12,7 +21,6 @@ set noswapfile
 set directory=.
 set hidden
 set number
-set clipboard+=unnamedplus
 set tabstop=4
 set numberwidth=4
 set shiftwidth=4

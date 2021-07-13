@@ -30,8 +30,6 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'} " statusline
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-Plug 'RishabhRD/popfix'
-Plug 'RishabhRD/nvim-lsputils'
 call plug#end()
 " ******************************************************************************
 
@@ -39,10 +37,9 @@ nmap <silent> rt <Plug>TranslateW
 vmap <silent> rt <Plug>TranslateWV
 
 lua require('lsp')
+lua require('lua-lsp')
 lua require('statusline')
 lua require('hl')
-lua require('lsputil')
-lua require('lua-lsp')
 
 " theme *********************************************************************
 set background=dark
@@ -63,6 +60,7 @@ source /home/sv/.config/nvim/plug.d/tags.vim
 source /home/sv/.config/nvim/plug.d/nvimgdb.vim
 source /home/sv/.config/nvim/plug.d/markdown.vim
 source /home/sv/.config/nvim/plug.d/dashboard.vim
+source /home/sv/.config/nvim/plug.d/telescope.vim
 
 source /home/sv/.config/nvim/misc.d/config.vim
 source /home/sv/.config/nvim/misc.d/fun.vim

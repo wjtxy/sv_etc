@@ -22,7 +22,7 @@ sudo rm /etc/ssh -rvf
 
 sudo cp $HOME"/sv_etc/etc/pacman*" /etc/ -rvf
 sudo pacman -Syyu --noconfirm
-sudo pacman -S --noconfirm sway dmenu xclip wl-clipboard alacritty \
+sudo pacman -S --noconfirm sway bemenu-wayland wl-clipboard alacritty \
 		wlroots xorg-xwayland wayland-protocols wayland zsh \
 		nodejs npm yarn rubygems \
 		python3 python2 python-pip openssl openssh base-devel clash 
@@ -49,3 +49,4 @@ git config --global init.defaultBranch main
 git config --global core.editor nvim
 sudo systemctl start sshd.service
 sudo systemctl enable sshd.service
+

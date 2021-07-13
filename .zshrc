@@ -33,8 +33,8 @@ alias cpfrometc="cp /home/sv/sv_etc/config/nvim/*.vim /home/sv/.config/nvim -rvf
 bindkey '^ ' autosuggest-accept
 bindkey '^k' autosuggest-accept
 
-export PATH="$PATH:/opt/arm-gcc/bin/:/opt/arm-xm-linux/usr/bin/:/opt/arm-xmv2-linux/usr/bin/"
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/arm-xm-linux/usr/lib/:/opt/arm-xmv2-linux/usr/lib/"
+export PATH="$PATH:/opt/arm-gcc/bin/:/opt/arm-xm-linux/usr/bin/:/opt/arm-xmv2-linux/usr/bin/:/opt/gcc-arm-none-eabi-4_9-2015q2/bin/"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/arm-xm-linux/usr/lib/:/opt/arm-xmv2-linux/usr/lib/:/opt/gcc-arm-none-eabi-4_9-2015q2/lib/gcc/arm-none-eabi/4.9.3"
 
 alias unproxy="unset http_proxy;unset https_proxy"
 # unset http_proxy

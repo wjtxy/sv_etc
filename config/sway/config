@@ -1,40 +1,50 @@
 # Read `man 5 sway` for a complete reference.
 
-exec pcloud
-exec fcitx5
-exec clash
-exec unclutter --timeout 1
-default_border none
-# client.focused #FF0099 #FF0099 #ffffff
-
-# Logo key. Use Mod1 for Alt.
-set $mod Mod1
-set $left h
-set $down j
-set $up k
-set $right l
-
-# set $term alacritty.sh
-set $term st
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
-
-output * bg /home/sv/pCloudDrive/image/20210704_04h39m02s_grim_kulou.png fill
-
-input * {
-	xkb_options caps:swapescape
-}
-### Key bindings
 #
-# Basics:
+# output:
+#
+	output * bg /home/sv/pCloudDrive/image/20210704_17h05m10s_grim.png fill
+#
+# term,dmenu:
+#
+	# set $term alacritty.sh
+	set $term st
+	set $menu dmenu_path | dmenu | xargs swaymsg exec --
+#
+# autostart:
+#
+	exec fcitx5
+	exec clash
+#
+# config:
+#
+	seat * hide_cursor 500
+	default_border none
+	# client.focused #FF0099 #FF0099 #ffffff
+#
+# Logo key. Use Mod1 for Alt.
+#
+	set $mod Mod1
+	set $left h
+	set $down j
+	set $up k
+	set $right l
+#
+# input:
+#
+	input * {
+		xkb_options caps:swapescape
+	}
+#
+# Key bindings:
 #
 	bindsym $mod+i exec /home/sv/sv_etc/script/vol_up.sh
 	bindsym $mod+n exec /home/sv/sv_etc/script/vol_down.sh
-#capture screen
+	#capture screen
 	bindsym $mod+Shift+g exec grim -g "$(slurp)" - | wl-copy
 	bindsym $mod+g exec grim -g "$(slurp)"
 	bindsym $mod+p exec grim
-
-    # Start a terminasplitvl
+	# Start a terminasplitvl
     bindsym $mod+Return exec $term
     bindsym $mod+Shift+q kill
     bindsym $mod+d exec $menu
@@ -83,11 +93,6 @@ input * {
 #
     bindsym $mod+b splith
     bindsym $mod+v splitv
-
-    # Switch the current container between different layout styles
-    # bindsym $mod+s layout stacking
-    # bindsym $mod+w layout tabbed
-    # bindsym $mod+e layout toggle split
     bindsym $mod+f fullscreen
 #
 # Scratchpad:
