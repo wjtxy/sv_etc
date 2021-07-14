@@ -33,9 +33,15 @@ local servers = { "clangd", 'vimls', "jsonls" ,"sumneko_lua", "bashls"}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
+<<<<<<< HEAD
 	capabilities = capabilities,
     flags = {
         debounce_text_changes = 150,
+=======
+    flags = {
+        debounce_text_changes = 150,
+     	capabilities = capabilities,
+>>>>>>> 2258c9d27dbe1109aa9949ed5c425ca39194432a
     }
   }
 end
