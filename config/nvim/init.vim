@@ -39,7 +39,7 @@ lua require('lsp')
 lua require('lua-lsp')
 lua require('statusline')
 lua require('hl')
-
+lua require('complete')
 
 lua << EOF
 EOF
