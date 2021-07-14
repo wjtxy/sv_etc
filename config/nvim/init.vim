@@ -19,12 +19,11 @@ Plug 'voldikss/vim-codelf'
 Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'vivy89/telescope.nvim'
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-translator'
 Plug 'jiangmiao/auto-pairs'
-
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'L3MON4D3/LuaSnip'
@@ -41,14 +40,9 @@ lua require('lua-lsp')
 lua require('statusline')
 lua require('hl')
 
-" theme *********************************************************************
-set background=dark
-colorscheme palenight
-hi Normal  guibg=NONE guibg=NONE
-set statusline=%1*\\      
-set termguicolors
-hi User1 gui=none guifg=red guibg=none
 
+lua << EOF
+EOF
 
 " *.vim ************************************************************************
 source /home/sv/.config/nvim/plug.d/undo.vim
@@ -65,3 +59,4 @@ source /home/sv/.config/nvim/plug.d/telescope.vim
 source /home/sv/.config/nvim/misc.d/config.vim
 source /home/sv/.config/nvim/misc.d/fun.vim
 source /home/sv/.config/nvim/misc.d/keymap.vim
+source /home/sv/.config/nvim/misc.d/theme.vim

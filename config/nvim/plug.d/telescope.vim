@@ -17,9 +17,10 @@ require('telescope').setup{
       '--column',
       '--smart-case'
     },
-    prompt_prefix = "> ",
-    selection_caret = "> ",
-    entry_prefix = "  ",
+	dynamic_preview_title = true,
+    prompt_prefix = ">",
+    selection_caret = ">",
+    entry_prefix = " ",
     initial_mode = "insert",
     selection_strategy = "reset",
     sorting_strategy = "descending",

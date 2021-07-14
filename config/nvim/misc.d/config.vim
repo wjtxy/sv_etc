@@ -25,8 +25,9 @@ set tabstop=4
 set numberwidth=4
 set shiftwidth=4
 set softtabstop=4
-set noexpandtab
 set smarttab
+set ts=4
+set noexpandtab
 set showcmd
 set scrolloff=15
 set autoread
