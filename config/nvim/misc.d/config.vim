@@ -1,3 +1,5 @@
+" setlocal spell spelllang=en_us
+" let loaded_spellfile_plugin = 1
 set clipboard+=unnamedplus
 " let g:clipboard = {
 "             \'copy': { '*': 'wl-copy', '+': 'lemonade copy' },

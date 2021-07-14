@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
@@ -7,8 +6,6 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap('i', '<cr>', 'compe#confirm("<cr>")', { expr = true })
 vim.api.nvim_set_keymap('i', '<c-space>', 'compe#complete()', { expr = true })
 
-=======
->>>>>>> 2258c9d27dbe1109aa9949ed5c425ca39194432a
 vim.o.completeopt = "menuone,noselect"
 
 require'compe'.setup {
@@ -37,20 +34,12 @@ require'compe'.setup {
     path = true;
     buffer = true;
     calc = true;
-<<<<<<< HEAD
-	spell = true;
+	spell = false;
     nvim_lsp = true;
     nvim_lua = true;
     vsnip = true;
     ultisnips = false;
     luasnip = false;
-=======
-    nvim_lsp = true;
-    nvim_lua = true;
-    vsnip = false;
-    ultisnips = false;
-    luasnip = true;
->>>>>>> 2258c9d27dbe1109aa9949ed5c425ca39194432a
   };
 }
 
@@ -88,12 +77,3 @@ _G.s_tab_complete = function()
   end
 end
 
-<<<<<<< HEAD
-=======
-vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-
-vim.api.nvim_set_keymap("i", "<CR>", "compe#confirm({ 'keys': '<CR>', 'select': v:true })", { expr = true })
->>>>>>> 2258c9d27dbe1109aa9949ed5c425ca39194432a

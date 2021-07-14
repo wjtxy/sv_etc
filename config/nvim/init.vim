@@ -36,11 +36,13 @@ nmap <silent> rt <Plug>TranslateW
 vmap <silent> rt <Plug>TranslateWV
 
 lua require('nvim-autopairs').setup()
+
 lua require('lsp')
 lua require('lua-lsp')
 lua require('statusline')
 lua require('hl')
 lua require('complete')
+
 
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
