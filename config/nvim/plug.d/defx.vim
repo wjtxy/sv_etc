@@ -1,6 +1,6 @@
 " defx *************************************************************************
 nnoremap rm :Defx<cr>
-autocmd VimEnter * if argc() == 0 | :Defx | endif
+" autocmd VimEnter * if argc() == 0 | :Defx | endif
 call defx#custom#option('_', {
 	\ 'columns': 'mark:git:icons:filename:type:size:time',
 	\ 'ignored_files':
@@ -40,7 +40,7 @@ function! s:defx_my_settings() abort
 	nnoremap <silent><buffer><expr> *
 	\ defx#do_action('toggle_select_all')
 	nnoremap <silent><buffer><expr> cd
-	\ defx#do_action('cd', ['/home/sv'])
+	\ defx#do_action('cd', ['/home/sv/.config/nvim'])
 	nnoremap <silent><buffer><expr> <CR>
 	\ defx#do_action('open')
 	nnoremap <silent><buffer><expr> l
