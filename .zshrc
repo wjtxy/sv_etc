@@ -19,12 +19,17 @@ alias t="trans  en:zh"
 alias gic="git clone --depth=1" 
 alias gis="git status" 
 alias gim="git commit -m "
-alias cptoetc="cp /home/sv/.config/nvim/*.vim /home/sv/sv_etc/config/nvim -rvf;\
+alias cptoetc="
+	cp /home/sv/.config/nvim/*.vim /home/sv/sv_etc/config/nvim -rvf;\
 	cp /home/sv/.config/nvim/plug.d /home/sv/sv_etc/config/nvim -rvf;\
 	cp /home/sv/.config/nvim/misc.d /home/sv/sv_etc/config/nvim -rvf;\
 	cp /home/sv/.config/nvim/lua /home/sv/sv_etc/config/nvim -rvf;\
 	cp /home/sv/.zshrc /home/sv/sv_etc/ -rvf"
-alias cpfrometc="cp /home/sv/sv_etc/config/nvim/*.vim /home/sv/.config/nvim -rvf;\
+alias cpfrometc="
+	rm /home/sv/.config/nvim/misc.d/* -rvf;\
+	rm /home/sv/.config/nvim/plug.d/* -rvf;\
+	rm /home/sv/.config/nvim/lua/* -rvf;\
+	cp /home/sv/sv_etc/config/nvim/*.vim /home/sv/.config/nvim -rvf;\
 	cp /home/sv/sv_etc/config/nvim/plug.d /home/sv/.config/nvim -rvf;\
 	cp /home/sv/sv_etc/config/nvim/misc.d /home/sv/.config/nvim -rvf;\
 	cp /home/sv/sv_etc/config/nvim/lua /home/sv/.config/nvim -rvf;\
