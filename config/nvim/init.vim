@@ -29,8 +29,13 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'} " statusline
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'vim-autoformat/vim-autoformat'
 call plug#end()
 " ******************************************************************************
+
+let g:formatterpath = ['/home/sv/sv_etc/other/.clang-format']
+nnoremap gi :Autoformat<cr>
+vnoremap gi :AutoformatLine<cr>
 
 nmap <silent> rt <Plug>TranslateW
 vmap <silent> rt <Plug>TranslateWV
@@ -43,11 +48,6 @@ lua require('statusline')
 lua require('hl')
 lua require('complete')
 
-inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
-inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 lua << EOF
 EOF
 
@@ -62,6 +62,7 @@ source /home/sv/.config/nvim/plug.d/nvimgdb.vim
 source /home/sv/.config/nvim/plug.d/markdown.vim
 source /home/sv/.config/nvim/plug.d/dashboard.vim
 source /home/sv/.config/nvim/plug.d/telescope.vim
+source /home/sv/.config/nvim/plug.d/complete.vim
 
 source /home/sv/.config/nvim/misc.d/config.vim
 source /home/sv/.config/nvim/misc.d/fun.vim

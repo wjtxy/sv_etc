@@ -1,7 +1,6 @@
 " user func **********************************************************************
-" setlocal spell spelllang=en_us
 
-autocmd BufEnter *.md,*.txt exec ":setlocal spell spelllang=en_us"
+" autocmd BufEnter *.md,*.txt exec ":setlocal spell spelllang=en_us"
 autocmd BufNewFile *.sh exec ":call Set_sh_Title()" 
 autocmd BufNewFile *.py exec ":call Set_py_Title()" 
 autocmd BufNewFile *.h exec ":call Set_h_Title()"

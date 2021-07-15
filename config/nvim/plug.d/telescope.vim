@@ -3,7 +3,7 @@ nnoremap rf <cmd>lua require('telescope.builtin').find_files()<cr>
 " nnoremap fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap rb <cmd>lua require('telescope.builtin').buffers()<cr>
 " nnoremap fh <cmd>lua require('telescope.builtin').help_tags()<cr>
-nnoremap gr <cmd>lua require('telescope.builtin').lsp_references()<CR>
+" nnoremap gr <cmd>lua require('telescope.builtin').lsp_references()<CR>
 
 lua << EOF
 require('telescope').setup{
