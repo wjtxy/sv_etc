@@ -34,6 +34,8 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' } " show color at backgr
 call plug#end()
 " ******************************************************************************
 
+" rrethy/vim-hexokinase ****
+let g:Hexokinase_highlighters = ['background']
 
 lua require('nvim-autopairs').setup()
 
@@ -59,8 +61,8 @@ source /home/sv/.config/nvim/plug.d/dashboard.vim
 source /home/sv/.config/nvim/plug.d/telescope.vim
 source /home/sv/.config/nvim/plug.d/complete.vim
 source /home/sv/.config/nvim/plug.d/format.vim
+source /home/sv/.config/nvim/plug.d/translate.vim
 
-source /home/sv/.config/nvim/misc.d/simple_plugin.vim
 source /home/sv/.config/nvim/misc.d/config.vim
 source /home/sv/.config/nvim/misc.d/fun.vim
 source /home/sv/.config/nvim/misc.d/keymap.vim
