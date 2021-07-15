@@ -1,10 +1,20 @@
 " user func **********************************************************************
 
+" autocmd BufEnter *.md,*.txt exec ":setlocal spell spelllang=en_us"
 autocmd BufNewFile *.sh exec ":call Set_sh_Title()" 
 autocmd BufNewFile *.py exec ":call Set_py_Title()" 
 autocmd BufNewFile *.h exec ":call Set_h_Title()"
 " autocmd BufWinEnter * silent call Copy_clang_format()
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
 
 " ******************************************************************************
 " func Copy_clang_format()

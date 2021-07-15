@@ -1,13 +1,15 @@
 -- source provider function
 local colors = require('galaxyline.theme').default
 local diagnostic = require('galaxyline.provider_diagnostic')
+local i = 0
 
-require('galaxyline').section.left[1]= {
-  FileName = {
+i = i + 1
+require('galaxyline').section.left[i]= {
+  Filename = {
     provider = function()
-		return vim.api.nvim_eval('substitute(expand("%:p"),$HOME,"~","g")')
+		return vim.api.nvim_eval('substitute(expand("%:p:h"),$HOME,"~","g")') .. '/'
 	end,
-    condition = function()
+	condition = function()
       if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
         return true
       end
@@ -15,12 +17,30 @@ require('galaxyline').section.left[1]= {
       end,
     icon = '',
     highlight = {colors.red},
-    separator = ' ',
+    separator = '',
     separator_highlight = {colors.darkblue},
   }
 }
 
-require('galaxyline').section.left[2]= {
+i = i + 1
+require('galaxyline').section.left[i]= {
+  FileName = {
+    provider = 'FileName',
+	condition = function()
+      if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
+        return true
+      end
+      return false
+      end,
+    icon = '',
+    highlight = {colors.red},
+    separator = '',
+    separator_highlight = {colors.darkblue},
+  }
+}
+
+i = i + 1
+require('galaxyline').section.left[i]= {
   FileSize = {
     provider = 'FileSize',
     condition = function()
@@ -36,7 +56,8 @@ require('galaxyline').section.left[2]= {
   }
 }
 
-require('galaxyline').section.left[3]= {
+i = i + 1
+require('galaxyline').section.left[i]= {
   FileTypeName = {
     provider = 'FileTypeName',
     condition = function()
@@ -49,7 +70,8 @@ require('galaxyline').section.left[3]= {
   }
 }
 
-require('galaxyline').section.left[4]= {
+i = i + 1
+require('galaxyline').section.left[i]= {
   FileFormat = {
     provider = 'FileFormat',
     condition = function()
@@ -62,7 +84,8 @@ require('galaxyline').section.left[4]= {
   }
 }
 
-require('galaxyline').section.left[5]= {
+i = i + 1
+require('galaxyline').section.left[i]= {
   GitBranch = {
     provider = 'GitBranch',
     condition = function()
@@ -75,8 +98,8 @@ require('galaxyline').section.left[5]= {
   }
 }
 
--- right ********************************
-require('galaxyline').section.left[6]= {
+i = i + 1
+require('galaxyline').section.left[i]= {
   GetLspClient = {
     provider = 'GetLspClient',
     condition = function()

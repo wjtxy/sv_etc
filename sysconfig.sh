@@ -50,3 +50,5 @@ git config --global core.editor nvim
 sudo systemctl start sshd.service
 sudo systemctl enable sshd.service
 
+git config --global http.postBuffer 1048576000
+sudo python -m pip install pySocks

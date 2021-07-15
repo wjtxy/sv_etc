@@ -9,12 +9,15 @@
 #
 	# set $term alacritty.sh
 	set $term st
-	set $menu dmenu_path | dmenu | xargs swaymsg exec --
+	set $menu bemenu-run
+	# set $menu dmenu_path | bemenu | xargs swaymsg exec --
 #
 # autostart:
 #
 	exec fcitx5
 	exec clash
+	# exec "lemonade server --log-level=4"
+	exec pcloud
 #
 # config:
 #

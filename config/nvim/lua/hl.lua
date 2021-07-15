@@ -7,3 +7,5 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
+
+-- vim.lsp.handlers['textDocument/references'] = denols_references
