@@ -30,15 +30,10 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'} " statusline
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'vim-autoformat/vim-autoformat'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' } " show color at background
 call plug#end()
 " ******************************************************************************
 
-let g:formatterpath = ['/home/sv/sv_etc/other/.clang-format']
-nnoremap gi :Autoformat<cr>
-vnoremap gi :AutoformatLine<cr>
-
-nmap <silent> rt <Plug>TranslateW
-vmap <silent> rt <Plug>TranslateWV
 
 lua require('nvim-autopairs').setup()
 
@@ -63,7 +58,9 @@ source /home/sv/.config/nvim/plug.d/markdown.vim
 source /home/sv/.config/nvim/plug.d/dashboard.vim
 source /home/sv/.config/nvim/plug.d/telescope.vim
 source /home/sv/.config/nvim/plug.d/complete.vim
+source /home/sv/.config/nvim/plug.d/format.vim
 
+source /home/sv/.config/nvim/misc.d/simple_plugin.vim
 source /home/sv/.config/nvim/misc.d/config.vim
 source /home/sv/.config/nvim/misc.d/fun.vim
 source /home/sv/.config/nvim/misc.d/keymap.vim
