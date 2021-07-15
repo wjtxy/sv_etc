@@ -6,11 +6,12 @@ set clipboard+=unnamedplus
 " 			\'cache_enabled': 1,
 "             \}
 set cursorline
-set mouse=a
+" set mouse=a
 set shortmess+=c
 set completeopt=menuone,noselect
 " set autochdir
-set nofoldenable
+" set nofoldenable
+set foldlevel=99  " close all folds
 set fencs=utf-8,ucs-bom,shift-jis,gbk,gb2312,gb18030,cp936,ansi,latin1
 set termencoding=gbk,utf-8
 set encoding=utf-8

@@ -2,20 +2,22 @@
 call plug#begin('~/.config/nvim/autoload')
 Plug 'luochen1990/rainbow' " color ()
 Plug 'tomtom/tcomment_vim' " comment
-Plug 'vivy89/DoxygenToolkit.vim'
+Plug 'vivy89/DoxygenToolkit.vim', {'on': ['Dox', 'DoxAuthor', 'DoxLic']}
 Plug 'mhinz/vim-signify' " view git/svn sign at left
 Plug 'preservim/tagbar'
-Plug 'ludovicchabant/vim-gutentags' " create tags
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'drewtempelmeyer/palenight.vim' " theme
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' } " file browser
 Plug 'kristijanhusak/defx-icons'
 Plug 'kristijanhusak/defx-git'
 Plug 'mbbill/undotree'
 Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
-Plug 'liuchengxu/vim-which-key'
-Plug 'ferrine/md-img-paste.vim'
+Plug 'liuchengxu/vim-which-key', { 'do': 'WhichKey' }
+Plug 'ferrine/md-img-paste.vim', {'for': 'markdown'}
+Plug 'godlygeek/tabular', {'for': 'markdown'}
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'voldikss/vim-codelf'
+Plug 'voldikss/vim-codelf', {'on': 'CodelfOpenBrowser'}
 Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'

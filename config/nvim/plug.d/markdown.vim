@@ -10,3 +10,7 @@ let g:mkdp_browserfunc='g:Open_in_new_window'
 " md-img-paste *****************************************************************
 autocmd FileType markdown nmap <buffer><silent> rp :call mdip#MarkdownClipboardImage()<CR>
 let g:mdip_imgdir = '.img'
+
+" plasticboy/vim-markdown ******************************************************
+let g:vim_markdown_no_default_key_mappings = 1
+

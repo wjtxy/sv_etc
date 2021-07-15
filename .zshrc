@@ -18,6 +18,7 @@ alias t="trans  en:zh"
 
 alias gic="git clone --depth=1" 
 alias gis="git status" 
+alias gl="lazygit" 
 alias cptoetc="
 	rm /home/sv/sv_etc/config/nvim/misc.d/* -rvf;\
 	rm /home/sv/sv_etc/config/nvim/plug.d/* -rvf;\
