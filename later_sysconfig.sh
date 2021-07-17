@@ -12,13 +12,13 @@ if [ "$(whoami)" != "sv" ];then
 fi
 
 sudo pacman -S --noconfirm lib32-gcc-libs bc lzop \
-		yay cpio rsync wget lib32-zlib unclutter subversion ctags \
-		wqy-microhei wqy-microhei-lite wqy-bitmapfont wqy-zenhei \
-		ttf-arphic-uming noto-fonts-cjk translate-shell ttf-arphic-ukai \
+		yay cpio rsync wget lib32-zlib subversion ctags \
+		noto-fonts-cjk translate-shell \
 		fcitx5 fcitx5-gtk fcitx5-qt fcitx5-material-color fcitx5-mozc \
 		fcitx5-configtool fcitx5-rime pulseaudio-alsa alsa-utils nfs-utils \
-		clang grim slurp llvm ccls man man-pages joplin-desktop \
+		clang grim slurp llvm man man-pages joplin-desktop \
 		ripgrep  the_silver_searcher bat ninja  
+# wqy-microhei wqy-microhei-lite wqy-bitmapfont wqy-zenhei ttf-arphic-uming ttf-arphic-ukai \
 
 yay -S --noconfirm google-chrome bear wechat-uos
 
@@ -26,7 +26,7 @@ git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $HOME"/.oh-
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting $HOME"/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
 
 mkdir $HOME"/app"
-git clone https://github.com/sumneko/lua-language-server $HOME"/app/lua-language-server"
+git clone --depth=1 https://github.com/sumneko/lua-language-server $HOME"/app/lua-language-server"
 cd $HOME"/app/lua-language-server"
 git submodule update --init --recursive
 cd 3rd/luamake

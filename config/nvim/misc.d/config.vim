@@ -1,3 +1,4 @@
+
 set clipboard+=unnamedplus
 " let g:clipboard = {
 "             \'copy': { '*': 'wl-copy', '+': 'lemonade copy' },
@@ -9,8 +10,9 @@ set cursorline
 " set mouse=a
 set shortmess+=c
 set completeopt=menuone,noselect
-" set autochdir
+set autochdir
 " set nofoldenable
+set foldmethod=syntax
 set foldlevel=99  " close all folds
 set fencs=utf-8,ucs-bom,shift-jis,gbk,gb2312,gb18030,cp936,ansi,latin1
 set termencoding=gbk,utf-8
@@ -51,6 +53,7 @@ let &fcs='eob: '
 let g:python_host_prog = "/usr/bin/python2"
 let g:python3_host_prog = "/usr/bin/python3"
 
+syntax on
 filetype on
 filetype plugin on
 filetype indent on

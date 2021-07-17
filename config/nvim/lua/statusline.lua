@@ -1,6 +1,24 @@
 -- source provider function
 local colors = require('galaxyline.theme').default
 local diagnostic = require('galaxyline.provider_diagnostic')
+local icon_colors = {
+   Brown        = '#905532',
+   Aqua         = '#3AFFDB',
+   Blue         = '#689FB6',
+   Darkblue     = '#44788E',
+   Purple       = '#834F79',
+   Red          = '#AE403F',
+   Beige        = '#F5C06F',
+   Yellow       = '#F09F17',
+   Orange       = '#D4843E',
+   Darkorange   = '#F16529',
+   Pink         = '#CB6F6F',
+   Salmon       = '#EE6E73',
+   Green        = '#8FAA54',
+   Lightgreen   = '#31B53E',
+   White        = '#FFFFFF',
+   LightBlue    = '#5fd7ff',
+}
 local i = 0
 
 i = i + 1
@@ -14,11 +32,11 @@ require('galaxyline').section.left[i]= {
         return true
       end
       return false
-      end,
+    end,
     icon = '',
     highlight = {colors.red},
     separator = '',
-    separator_highlight = {colors.darkblue},
+    separator_highlight = {},
   }
 }
 
@@ -35,7 +53,7 @@ require('galaxyline').section.left[i]= {
     icon = '',
     highlight = {colors.red},
     separator = '',
-    separator_highlight = {colors.darkblue},
+    separator_highlight = {},
   }
 }
 
@@ -52,7 +70,7 @@ require('galaxyline').section.left[i]= {
     icon = '',
     highlight = {colors.blue},
     separator = '',
-    separator_highlight = {colors.darkblue},
+    separator_highlight = {},
   }
 }
 
@@ -66,7 +84,7 @@ require('galaxyline').section.left[i]= {
     icon = '',
     highlight = {colors.yellow},
     separator = ' ',
-    separator_highlight = {colors.darkblue},
+    separator_highlight = {},
   }
 }
 
@@ -80,7 +98,7 @@ require('galaxyline').section.left[i]= {
     icon = '',
     highlight = {colors.red},
     separator = ' ',
-    separator_highlight = {colors.darkblue},
+    separator_highlight = {},
   }
 }
 
@@ -89,12 +107,15 @@ require('galaxyline').section.left[i]= {
   GitBranch = {
     provider = 'GitBranch',
     condition = function()
-        return true
+		if require('galaxyline.provider_vcs').get_git_branch() then
+			return true
+		end
+		return false
       end,
-    icon = '[',
+    icon = '->',
     highlight = {colors.white},
-    separator = ']',
-    separator_highlight = {colors.white},
+    separator = ' ',
+    separator_highlight = {},
   }
 }
 
@@ -105,14 +126,18 @@ require('galaxyline').section.left[i]= {
     condition = function()
         return true
       end,
-    icon = ' ',
+    icon = '',
     highlight = {colors.cyan},
     separator = '',
-    separator_highlight = {colors.darkblue},
+    separator_highlight = {},
   }
 }
 
-require('galaxyline').section.right[2]= {
+-- ********************************************************
+i = 0
+
+i = i + 1
+require('galaxyline').section.right[i]= {
   DiagnosticError = {
     provider = 'DiagnosticError',
     condition = function()
@@ -124,11 +149,12 @@ require('galaxyline').section.right[2]= {
     icon = ' ',
     highlight = {colors.red},
     separator = '',
-    separator_highlight = {colors.darkblue},
+    separator_highlight = {},
   }
 }
 
-require('galaxyline').section.right[3]= {
+i = i + 1
+require('galaxyline').section.right[i]= {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
     condition = function()
@@ -140,21 +166,41 @@ require('galaxyline').section.right[3]= {
     icon = ' ',
     highlight = {colors.yellow},
     separator = '',
-    separator_highlight = {colors.darkblue},
+    separator_highlight = {},
   }
 }
 
-require('galaxyline').section.right[4]= {
+i = i + 1
+require('galaxyline').section.right[i]= {
   LinePercent = {
     provider = 'LinePercent',
-    condition = function()
+	condition = function()
+      if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
         return true
-      end,
+      end
+      return false
+    end,
     icon = '',
     highlight = {colors.violet},
     separator = '',
-    separator_highlight = {colors.darkblue},
+    separator_highlight = {},
   }
 }
 
+i = i + 1
+require('galaxyline').section.right[i]= {
+  LineColumn = {
+    provider = 'LineColumn',
+	condition = function()
+      if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
+        return true
+      end
+      return false
+    end,
+    icon = '',
+    highlight = {icon_colors.Aqua},
+    separator = '',
+    separator_highlight = {},
+  }
+}
 
