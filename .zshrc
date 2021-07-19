@@ -11,6 +11,7 @@ plugins=(git
 
 setopt no_nomatch
 source $ZSH/oh-my-zsh.sh
+source /home/sv/sv_etc/script/auto-ls.zsh
 
 alias em="emacs -nw"
 alias q="exit"
@@ -44,9 +45,7 @@ bindkey '^k' autosuggest-accept
 export PATH="$PATH:/opt/arm-gcc/bin/:/opt/arm-xm-linux/usr/bin/:/opt/arm-xmv2-linux/usr/bin/:/opt/gcc-arm-none-eabi-4_9-2015q2/bin/"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/arm-xm-linux/usr/lib/:/opt/arm-xmv2-linux/usr/lib/:/opt/gcc-arm-none-eabi-4_9-2015q2/lib/gcc/arm-none-eabi/4.9.3"
 
-alias unproxy="unset http_proxy;unset https_proxy"
-# unset http_proxy
-# unset https_proxy
+alias unproxy="unset http_proxy;unset https_proxy;unset socks5"
 export http_proxy=127.0.0.1:7890
 export https_proxy=127.0.0.1:7890
 export socks5=127.0.0.1:7891

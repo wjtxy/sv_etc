@@ -36,7 +36,7 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' } " show color at backgr
 call plug#end()
 " ******************************************************************************
 
-" rrethy/vim-hexokinase ****
+" rrethy/vim-hexokinase ********************************************************
 let g:Hexokinase_highlighters = ['background']
 
 lua require('nvim-autopairs').setup()

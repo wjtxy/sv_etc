@@ -189,8 +189,10 @@ require('galaxyline').section.right[i]= {
 
 i = i + 1
 require('galaxyline').section.right[i]= {
-  LineColumn = {
-    provider = 'LineColumn',
+  linecolumn = {
+    provider = function ()
+		return vim.fn.line('$') .. " :" .. (vim.fn.col('.') - 1)
+	end,
 	condition = function()
       if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
         return true
