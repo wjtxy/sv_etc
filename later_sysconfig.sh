@@ -38,4 +38,7 @@ cp $HOME"/sv_etc/.zshrc" $HOME"/" -rvf
 source $HOME"/.zshrc"
 rehash
 
+sudo pacman -S --noconfirm rustup rust-analyzer
+rustup toolchain install stable
+rustup component add rls rust-analysis rust-src
 

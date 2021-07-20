@@ -128,7 +128,7 @@ require('galaxyline').section.left[i]= {
       end,
     icon = '',
     highlight = {colors.cyan},
-    separator = '',
+    separator = ' ',
     separator_highlight = {},
   }
 }

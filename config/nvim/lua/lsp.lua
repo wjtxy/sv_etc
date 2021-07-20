@@ -25,7 +25,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { "clangd", 'vimls', "jsonls" ,"sumneko_lua", "bashls"}
+local servers = { "rust_analyzer", "clangd", 'vimls', "jsonls" ,"sumneko_lua", "bashls"}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,

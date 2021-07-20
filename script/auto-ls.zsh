@@ -6,11 +6,11 @@ if (( ! ${+AUTO_LS_CHPWD} )); then
 fi
 
 if [[ $#AUTO_LS_COMMANDS -eq 0 ]]; then
-  AUTO_LS_COMMANDS=(ls git-status)
+  AUTO_LS_COMMANDS=(ls)
 fi
 
 if (( ! ${+AUTO_LS_NEWLINE} )); then
-  AUTO_LS_NEWLINE=true
+  AUTO_LS_NEWLINE=false
 fi
 
 if (( ! ${+AUTO_LS_PATH} )); then
@@ -23,11 +23,11 @@ auto-ls-ls () {
   [[ $AUTO_LS_NEWLINE != false ]] && echo ""
 }
 
-auto-ls-git-status () {
-  if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == true ]]; then
-    git status
-  fi
-}
+# auto-ls-git-status () {
+#   if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == true ]]; then
+#     git status
+#   fi
+# }
 
 auto-ls () {
   # Possible invocation sources:
