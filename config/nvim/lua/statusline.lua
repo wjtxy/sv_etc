@@ -128,7 +128,7 @@ require('galaxyline').section.left[i]= {
       end,
     icon = '',
     highlight = {colors.cyan},
-    separator = ' ',
+    separator = '',
     separator_highlight = {},
   }
 }
@@ -189,10 +189,8 @@ require('galaxyline').section.right[i]= {
 
 i = i + 1
 require('galaxyline').section.right[i]= {
-  linecolumn = {
-    provider = function ()
-		return vim.fn.line('$') .. " :" .. (vim.fn.col('.') - 1)
-	end,
+  LineColumn = {
+    provider = 'LineColumn',
 	condition = function()
       if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
         return true
