@@ -40,5 +40,5 @@ rehash
 
 sudo pacman -S --noconfirm rustup rust-analyzer
 rustup toolchain install stable
-rustup component add rls rust-analysis rust-src
-
+rustup component add rls rust-analysis rust-src llvm-tools-preview
+cargo install cargo-binutils cargo-generate

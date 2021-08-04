@@ -4,7 +4,7 @@
 autocmd BufNewFile *.sh exec ":call Set_sh_Title()" 
 autocmd BufNewFile *.py exec ":call Set_py_Title()" 
 autocmd BufNewFile *.h exec ":call Set_h_Title()"
-" autocmd BufWinEnter * silent call Copy_clang_format()
+autocmd BufWinEnter *.rs nnoremap gi :lua vim.lsp.buf.formatting()<cr>
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
