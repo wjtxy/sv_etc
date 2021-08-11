@@ -17,6 +17,8 @@ au FileType gitcommit,gitrebase,json,vim,make,sh,markdown,conf
 			\let g:gutentags_enabled=0
 
 " tagbar ***********************************************************************
+nnoremap tb :Tagbar<cr>
+
 let g:tagbar_sort = 0
 let g:tagbar_autoclose = 1
 let g:tagbar_show_balloon = 0

@@ -20,7 +20,7 @@ sudo pacman -S --noconfirm lib32-gcc-libs bc lzop \
 		ripgrep  the_silver_searcher bat ninja fuseiso \
 		xorg xorg-xinit dmenu picom xclip zip nitrogen
 
-yay -S --noconfirm google-chrome bear wechat-uos
+yay -S --noconfirm google-chrome bear wechat-uos clipcat
 
 git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $HOME"/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting $HOME"/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
