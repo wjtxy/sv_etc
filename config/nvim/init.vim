@@ -12,18 +12,11 @@ Plug 'kristijanhusak/defx-icons'
 Plug 'kristijanhusak/defx-git'
 Plug 'mbbill/undotree'
 Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
-Plug 'liuchengxu/vim-which-key', { 'do': 'WhichKey' }
+" Plug 'liuchengxu/vim-which-key', { 'do': 'WhichKey' }
 Plug 'ferrine/md-img-paste.vim', {'for': 'markdown'}
 Plug 'godlygeek/tabular', {'for': 'markdown'}
 Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'voldikss/vim-codelf', {'on': 'CodelfOpenBrowser'}
-Plug 'glepnir/dashboard-nvim'
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'vivy89/telescope.nvim'
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-translator'
 Plug 'windwp/nvim-autopairs'
 Plug 'neovim/nvim-lspconfig'
@@ -35,11 +28,8 @@ Plug 'vim-autoformat/vim-autoformat'
 call plug#end()
 " ******************************************************************************
 
-" rrethy/vim-hexokinase ********************************************************
-let g:Hexokinase_highlighters = ['background']
 
 lua require('nvim-autopairs').setup()
-
 lua require('lsp')
 lua require('lua-lsp')
 lua require('statusline')
@@ -58,8 +48,6 @@ source /home/sv/.config/nvim/plug.d/tcomment.vim
 source /home/sv/.config/nvim/plug.d/tags.vim
 source /home/sv/.config/nvim/plug.d/nvimgdb.vim
 source /home/sv/.config/nvim/plug.d/markdown.vim
-source /home/sv/.config/nvim/plug.d/dashboard.vim
-source /home/sv/.config/nvim/plug.d/telescope.vim
 source /home/sv/.config/nvim/plug.d/complete.vim
 source /home/sv/.config/nvim/plug.d/format.vim
 source /home/sv/.config/nvim/plug.d/translate.vim
