@@ -9,25 +9,29 @@ sudo cp $HOME"/sv_etc/script/cpu_pf.service" /usr/lib/systemd/system/ -rvf
 sudo systemctl enable cpu_pf.service
 sudo systemctl start cpu_pf.service
 
+mkdir $HOME"/.dwm"
+cp /home/sv/sv_etc/other/autostart.sh /home/sv/.dwm/
 sudo mkdir -p /root/.config
 mkdir $HOME"/.config"
 sudo git clone --depth=1 https://github.com/vivy89/st /opt/st
 sudo ln -sf /opt/st/st /usr/bin/st
 cp $HOME"/sv_etc/.pam_environment" $HOME"/.pam_environment" -rvf
-cp $HOME"/sv_etc/config/*" $HOME"/.config/" -rvf
+cp /home/sv/sv_etc/config/* /home/sv/.config -rvf
 sudo ln -sf $HOME"/.config/nvim" /root/.config/nvim
 sudo ln -sf $HOME"/sv_etc/script/chrome.sh" /usr/bin/chrome.sh
 sudo ln -sf $HOME"/sv_etc/script/alacritty.sh" /usr/bin/alacritty.sh
 sudo rm /etc/ssh -rvf
 
-sudo cp $HOME"/sv_etc/etc/pacman*" /etc/ -rvf
+sudo cp $HOME"/sv_etc/etc" / -rvf
+sudo pacman -Syyu --noconfirm
+sudo pacman -S --noconfirm archlinux-keyring
 sudo pacman -Syyu --noconfirm
 sudo pacman -S --noconfirm sway bemenu-wayland wl-clipboard alacritty \
 		wlroots xorg-xwayland wayland-protocols wayland zsh \
 		nodejs npm yarn rubygems \
 		python3 python2 python-pip openssl openssh base-devel clash 
 		
-sudo cp $HOME"/sv_etc/etc/*" /etc/ -rvf
+sudo cp $HOME"/sv_etc/etc" / -rvf
 
 # archlinux no sound
 amixer sset Master unmute

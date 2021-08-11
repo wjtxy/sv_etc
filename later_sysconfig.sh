@@ -13,17 +13,22 @@ fi
 
 sudo pacman -S --noconfirm lib32-gcc-libs bc lzop \
 		yay cpio rsync wget lib32-zlib subversion ctags \
-		noto-fonts-cjk translate-shell \
+		noto-fonts-cjk translate-shell go\
 		fcitx5 fcitx5-gtk fcitx5-qt fcitx5-material-color fcitx5-mozc \
 		fcitx5-configtool fcitx5-rime pulseaudio-alsa alsa-utils nfs-utils \
 		clang grim slurp llvm man man-pages joplin-desktop \
-		ripgrep  the_silver_searcher bat ninja  
-# wqy-microhei wqy-microhei-lite wqy-bitmapfont wqy-zenhei ttf-arphic-uming ttf-arphic-ukai \
+		ripgrep  the_silver_searcher bat ninja fuseiso \
+		xorg xorg-xinit dmenu picom xclip zip
 
 yay -S --noconfirm google-chrome bear wechat-uos
 
 git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $HOME"/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting $HOME"/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+
+sudo pacman -S --noconfirm rustup rust-analyzer
+rustup toolchain install stable
+rustup component add rls rust-analysis rust-src llvm-tools-preview
+cargo install cargo-binutils cargo-generate
 
 mkdir $HOME"/app"
 git clone --depth=1 https://github.com/sumneko/lua-language-server $HOME"/app/lua-language-server"
@@ -38,7 +43,3 @@ cp $HOME"/sv_etc/.zshrc" $HOME"/" -rvf
 source $HOME"/.zshrc"
 rehash
 
-sudo pacman -S --noconfirm rustup rust-analyzer
-rustup toolchain install stable
-rustup component add rls rust-analysis rust-src llvm-tools-preview
-cargo install cargo-binutils cargo-generate
