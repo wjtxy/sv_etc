@@ -55,7 +55,8 @@ unset MANPATH
 export PATH="$PATH:/home/sv/.local/share/gem/ruby/3.0.0/bin"
  
 if [ $(whoami) == "sv" ] && [ ! "$(env | grep -i ssh)" ] && [ -z $DISPLAY ] && [ "$(tty)" == "/dev/tty1" ]; then
-  exec sway
+#  exec sway
+	exec startx
 fi
 
 # if [ $(whoami) == "sv" ] && [ ! "$(env | grep -i ssh)" ];then

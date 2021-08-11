@@ -32,7 +32,6 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'} " statusline
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'vim-autoformat/vim-autoformat'
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' } " show color at background
 call plug#end()
 " ******************************************************************************
 
