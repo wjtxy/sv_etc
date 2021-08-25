@@ -11,29 +11,31 @@ sudo systemctl start cpu_pf.service
 
 mkdir $HOME"/.dwm"
 cp /home/sv/sv_etc/other/autostart.sh /home/sv/.dwm/
+mkdir /home/sv/share
 sudo mkdir -p /root/.config
 mkdir $HOME"/.config"
 sudo git clone --depth=1 https://github.com/vivy89/st /opt/st
+sudo git clone --depth=1 https://github.com/vivy89/dwm /opt/dwm
 sudo ln -sf /opt/st/st /usr/bin/st
+sudo ln -sf /opt/dwm/dwm /usr/bin/dwm
 cp $HOME"/sv_etc/.pam_environment" $HOME"/.pam_environment" -rvf
 cp $HOME"/sv_etc/.xinitrc" $HOME"/.xinitrc" -rvf
 cp /home/sv/sv_etc/config/* /home/sv/.config -rvf
 sudo ln -sf $HOME"/.config/nvim" /root/.config/nvim
 sudo ln -sf $HOME"/sv_etc/script/chrome.sh" /usr/bin/chrome.sh
 sudo ln -sf $HOME"/sv_etc/script/alacritty.sh" /usr/bin/alacritty.sh
-sudo rm /etc/ssh -rvf
 
 sudo cp $HOME"/sv_etc/etc" / -rvf
-sudo pacman -Syyu --noconfirm
 sudo pacman -S --noconfirm archlinux-keyring
 sudo pacman -Syyu --noconfirm
-sudo pacman -S --noconfirm sway bemenu-wayland wl-clipboard alacritty \
-		wlroots xorg-xwayland wayland-protocols wayland zsh \
+# sudo pacman -S --noconfirm sway bemenu-wayland wl-clipboard alacritty \
+# 		wlroots xorg-xwayland wayland-protocols wayland zsh \
+# 		nodejs npm yarn rubygems \
+# 		python3 python2 python-pip openssl openssh base-devel clash 
+sudo pacman -S --noconfirm zsh \
 		nodejs npm yarn rubygems \
-		python3 python2 python-pip openssl openssh base-devel clash 
+		python3 python2 python-pip base-devel clash 
 		
-sudo cp $HOME"/sv_etc/etc" / -rvf
-
 # archlinux no sound
 amixer sset Master unmute
 python2 $HOME"/sv_etc/script/get-pip.py"
@@ -52,8 +54,5 @@ git config --global oh-my-zsh.hide-dirty 1
 git config --global credential.helper store 
 git config --global init.defaultBranch main
 git config --global core.editor nvim
-sudo systemctl start sshd.service
-sudo systemctl enable sshd.service
-
 git config --global http.postBuffer 1048576000
-sudo python -m pip install pySocks
+

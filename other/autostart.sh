@@ -9,4 +9,5 @@ fcitx5&
 pcloud&
 clash&
 picom&
+nitrogen --restore&
 setxkbmap -option caps:escape
